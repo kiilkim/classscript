@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="classhtmlcss.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+
+</head>
+
+<body class ="js-html-main">
+  
+
+    <script src="html12js.js">
+    </script>
+    <header>
+        <h1>JAVA</h1>
+            <hr>
+            <h3>웹의 여러가지 기능을 제어하는 것. 응용.</h3>
+            <hr>
+    </header>
+
+    <section>
+
+        <nav> <!--월별-->
+            <ul>
+                <li><a href ="javacla12.html">12월</a></li>
+                <hr>
+                <li><a href ="javacla01.html">1월</li>
+
+                <hr>
+                <li><a href ="javacla02.html"></a>2월</li>
+                
+                <hr>
+                <li><a href ="javacla03.html"></a>3월</li>
+                
+                <hr>
+                <li><a href ="javacla04.html"></a>4월</li>
+                
+                <hr>
+                <li><a href ="javacla05.html"></a>5월</li>
+                
+                <hr>
+                <li><a href ="javacla06.html"></a>6월</li>
+                
+                <hr>
+            </ul>
+
+        </nav>
+        <article> <!--수업내용-->
+            <h2>[1월] 0106</h2>
+
+
+            <h3></h3>
+            <pre class = "si">
+        1. ASC11코드 - American Standard Code(미국표준문자코드)
+            1) 7bit로 구성 =2^7 =128가지 문자표현가능
+            2) 10진수로 형태 표현
+            3) '0'(48), 'A'(65), 'a'(97) 정도만 외우기
+        
+        2. Unicode (유니코드)
+            1) 전세계 모든 문자 표현
+            2) 아스키코드 포함
+            3) 2byte로 구성(16bit) =2^16=65536가지 문자표현가능
+            4) 16진수로 표현
+            5) '\ 기호와 u를 뒤에 쓰고 16진수 4자리(xxxx) 붙여 표현'
+
+        3. Char타입
+            1) 문자 1개를 표현하는 데이터타입 
+            2) 유니코드 방식 사용
+        
+        
+        *실전예제 
+        
+        1. Char ch1 = 'A'; 
+
+        2. 작은따옴표를 사용하여 작은따옴표 표시하려면 '\''
+
+        3. char ch2 = 65; 정수값을 사용한 문자 표현 결과는?
+
+        4. char ch3 = '\u0041'l 유니코드 표현법 사용한 문자표현 결과는?
+
+        5. ch3 = '\uAC00'; 유니코드 표현법을 사용한 문자표현법 결과는?
+
+        
+        <hr>
+
+        1. String 
+         
+         1) '문자열'을 표현하기 위한 데이터타입
+         2) 기본형이 아닌 '참조형'
+         3) 1개이상의 문자열을 ""로 묶어서 표현
+         4) 아무것도 포함하지 않는 ""를 '널스트링'이라 한다.
+         5) 덧셈 연산자를 활용하여 문자열 결합 가능
+         
+        2. 예제
+         1) String s1 ="String과 Char는 다르다!"; (어떻게다른가?)
+         2) String s2 =""; 
+        
+        3. 이스케이프 문자를 활용하여 다양한 기능 적용 가능
+         1) 문자열 내에서 큰따옴표 표현하려면 \" 형태로 표현 필수
+         2) String s3 ="안녕하세요, \n \"자바프로그래밍\" \t 아이티윌";
+         3) \t는 탭기능이다.
+
+        4. 덧셈 연산자를 활용한 문자열 결합
+         1) 데이터 X 와 문자열을 결합하면 새로운 문자열이 된다.
+          ex) x + "문자열" = "x문자열",
+
+         2) 예제
+          - system.out.println("1"+"2"); 결과는?
+          - system.out.println("자바"+"프로그래밍"); 결과는?
+          - system.out.println(1+"문자열";
+          - system.out.println("문자열"+1);
+
+         3) 주의사항
+          - 결합순서에 따라 연산이 먼저 수행된 후 다음 연산 수행
+          - system.out.println(1+2+"문자열");
+          - system.out.println("문자열"+1+2);
+        
+        <hr>
+
+        1. 형변환 
+         -데이터타입 간의 변환이 일어나는 것
+         -기본형 끼리의 형변환과 참조형 끼리의 형변환으로 구분
+
+         1) 묵시적 형변환 (=암시, 자동 형변환)
+          -작은 데이터->큰데이터 타입
+          -별도의 연산자 사용x, 오류가 발생x
+
+         2) 명시적 형변환 (=강제 형변환)
+          -큰 데이터->작은 데이터로 변환
+          -반드시 형변환 연산자로 사용하여 우변의 데이터 앞에 작은
+          데이터 타입 명시
+          -이 때, 원본데이터의 넘침 '오버플로우' 발생할 가능성
+
+        2. 예시
+
+         1) int a1 = 128;  byte a2 =127;
+         2) 변환전 a1: a1값, a2: a2값을 문자로 나타내라
+         3) a1 = a2 ; 에서는 a2가 a1에 담기는 것이다.
+            a1 = (int)a2; 라 해도 되지만 안쓴다.
+         4) 변환후 a1: a1 값, a2: a2값을 문자로 나타내라
+            같아야 정답이다.
+
+         1) int b1 = 128;  byte b2 =127;
+         2) 변환전 b1: b1값, b2: b2값을 문자로 나타내라
+         3) b2 = b1; 을 실행하라. 
+         4) 뭔가 이상하면 고쳐라 
+         5) 고치고 변환후 b1: b1값, b2: b2값을 문자로 나타내라.
+
+         * 우변의 데이터 앞에 작은데이터 타입 이름을 써라!(중요)
+
+         1) int c1 = 10; byte c2 = 0;
+         2) 만약에 작은 데이터 타입이 큰데이터타입을 담을 수
+         있으면 괜찮다 (예를들어 1.8L우유에 1L도 안들어있었다)
+
+
+        3. Char 타입과 byte 또는 short 타입 사이엔 언제나 명시적!
+
+         1) byte b = 65;  short s = 100;
+         2) byte->short , short->byte 수행하라.
+
+         <hr>
+
+         1. print(), println(), printf()
+
+          1) print(), println() 의 차이는 줄바꿈 여부의 차이 
+          2) print() 는 아무데이터 없으면 출력불가
+
+          3) printf()
+           -출력할 형식을 미리 지정하여 원하는 형태로 데이터 출력 format
+           -""안에 지정문자를 사용하여 형식을 지정한 뒤 ""우측에 
+           콤마(,)를 붙이고 실제 데이터 지정
+
+
+         2. 예시
+          1) system.out.println("java");
+             system.out.println("programing");
+
+             system.out.print("java");
+             system.out.println("programing");
+
+             의 차이
+
+           2) system.out.printf("1234567890");
+              system.out.printf("1234567890 \n");
+              
+              '\n' 사용하여 줄바꿈 필요
+
+           3) %d 또는 %Xd : 10진수 출력 (x부분은 옵션)
+           system.out.printf("%d$ \n", 12345);
+           system.out.printf("%10d$ \n", 12345); 10자리 확보후 오른쪽/어디쓰임?
+           System.out.printf("%-10d$ \n", 12345); 왼쪽정렬/ 당최 어디쓰임?
+
+           4) %f 또는 %Xf : 10진수 실수 출력 (X부분은 옵션)
+
+           System.out.printf("%f \n", 3.141592);
+		   System.out.printf("%2f \n", 3.141592);
+           System.out.printf("%.2f \n", 3.141592); .x에서 x자리만큼 소수점표시
+           
+           5) 10진수, 8진수, 16진수 출력
+
+           System.out.printf("%d \n", 255); 10
+           System.out.printf("%o \n", 255); 8
+           System.out.printf("%x \n", 255); 16진수
+           
+           6) 8진수 정수 표기법 : 숫자앞에 접두어 0 붙입
+           
+           System.out.println(0777); 8진수는 7까지!
+
+           7) 16진수 정수 표기법 : 숫자앞에 접두어 0x
+           
+           System.out.println(0xA);  A=10이므로
+
+           8) %c : 문자 1개 지정
+
+           9) %s 또는 %Xs : 문자열 지정(X 는 옵션)
+           System.out.printf("%s \n", "Korea"); // 문자열 출력
+           System.out.printf("%10s \n", "Korea"); // 문자열 10자리 확보 후 우측 정렬 출력
+           System.out.printf("%10.3s \n", "Korea"); // 문자열 10자리 확보, 3글자만 우측 정렬 출력
+           System.out.printf("%10.3S \n", "Korea"); // 문자열 모두 대문자로 출력
+           String str = "Java Programming";
+           System.out.printf("%S \n", str); // 변수도 사용 가능
+
+
+
+
+
+
+
+
+
+        
+
+         
+
+            </pre>
+
+
+            </p>
+            <input type="button" value="다음페이지" onclick="
+               java01_2next1()">
+
+        
+
+
+        </article> <!--끝엔 한주 수업단위별-->
+
+
+    </section>
+
+    
+    
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="classhtmlcss.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+
+</head>
+
+<body class ="js-html-main">
+
+
+   
+  
+
+    <script src="html12js.js">
+    </script>
+    <header>
+        <h1>DATABASE</h1>
+            <hr>
+            <h3>IT기술의 심장.</h3>
+            <hr>
+    </header>
+
+    <section>
+
+        <nav> <!--월별-->
+            <ul>
+                <li><a href ="dbcla12.html">12월</a></li>
+                <hr>
+                <li><a href ="dbcla01.html">1월</a></li>
+
+                <hr>
+                <li><a href ="dbcla02.html"></a>2월</li>
+                
+                <hr>
+                <li><a href ="dbcla03.html"></a>3월</li>
+                
+                <hr>
+                <li><a href ="dbcla04.html"></a>4월</li>
+                
+                <hr>
+                <li><a href ="dbcla05.html"></a>5월</li>
+                
+                <hr>
+                <li><a href ="dbcla06.html"></a>6월</li>
+                
+                <hr>
+            </ul>
+
+        </nav>
+        <article> <!--수업내용-->
+            <h2>[12],[1월] 0107</h2>
+            <h3>1. oracle 설치</h3>
+            <pre class ="si">
+    1) 첨부파일 virtual box 실행 (총 기가15)
+    2) 메모리는 1024, 2048 설정, 가상공간, 공간 10~20gb 할당
+    
+    3) SQL? 
+     - Structured Query Language
+     - let you access and manipulate databases
+     - execute queries against a database
+     - retrieve data from a database
+     - insert records, update records, in a database
+     - create new databases, new tables, stored procedure, views
+     - set permission on tables,procedures, 
+            
+            </pre>
+            <h3>2. DB불러오기 </h3>
+          
+            <pre class ="si">
+    1) select , from
+    2) null 값 - 사용할 수 없는 값, 알려지지 않은 값/
+    3) as 키워드 -없어도됨, 공백, 특수문자 포함경우
+    4) 리터럴 = 상수 뭔가 데이터를 꾸며주고 싶을때 사용
+     
+    5) ||'안에 넣으면 데이터 수식가능'|| , 연결연산자<strong>||</strong>||중요
+    
+    6) 만약 잘못 넣었을때 ed 넣으면 편집모드 -> 수정가능
+     wq 하고 끝나면 출력 주의점: 구문실행떄는 / 
+
+    7) * 과 | 등 문법 관련 내용
+     -* : 단독으로 사용시 모든 컬럼 
+     -| : or 의 의미(java에서도)
+     -& : and 의 의미
+     -[] : baskets 생략가능
+     -{} : braces 묶음
+    
+    8) where 절 조건
+     -날짜? ''안에 있으면 문자잖아? 우회하는방법 특정패턴? 국가마다 달라
+     - = > &lt; >=, &gt;=,  같지않다 : !=, ^=, &lt;>
+     -범위 구간 between a and b
+     -In 연산자 선택하는 것. 
+     - _ : 한자리문자
+     - % : 0~n자리문자
+    
+     
+      </pre>
+
+      <h3> 0110 수업</h3>
+      <hr>
+      <h4>1교시</h4>
+      <pre class= "si">
+    1. 데이터베이스 테이블
+
+     0) *는 모든 컬럼 보여주기
+
+     1) 세로줄 columns, 열 - select로 선택
+                           - from 으로 가져올 table 정하기  
+     2) 가로줄 rows, 행    - where(option) - 맞는 조건만 불러오기
+      
+     3) 컬럼의 데이터를 가져와서 12* 같은 사칙연산도 할 수 있다. 원하는 우선순위()묶기
+
+     4) null 값 - 다른 데이터에도 영향, 
+
+     5) 뒤에 column ailas 를 써서 분류 가능 '컬럼 as 분류명', '컬럼 분류명'
+       대소문자 ,공백 다 포함하고 싶으면 ""를 붙이면 된다. 
+
+    2. 연결연산자
+     
+     1)여러 컬럼을 하나도 붙이기 
+      
+     2) || ''|| 사용하여 컬럼 + '하고싶은말' + 컬럼 형태로 가능
+    
+    3. distinck 키워드
+     
+     1) 자리가 고정되어있다. 중복값 제거 한번만 적용해주면 됨.
+
+    4. [] 묶여 있다는 것은 다 option이라서 필요한 것만 쓰면된다.  
+
+    5. where 조건을 달건데 last_name(컬럼)에 어떤식으로 '='(같은것을 찾겠다.) 값
+     ex) where last_name = '값'
+     - 형식이 있다. 날짜는 dd-mm-yy 
+
+    6. 비교연산자
+     - = 같다 , > 크다 , &lt; 작다 , >= 크거나 같다 , &gt;= 작거나 같다 , 1=/^/&lt;> 같지않다<div class="">
+     <!--
+         어디서 쓸 수 있을까?
+
+         부산 방문 횟수가 1~3사이 외국인의 수? 
+
+
+     --> 
+
+    7. between a and b
+
+    8. IN 연산자 (a,b,c) a,b,c중 하나라도 일치하면 출력해줘라!
+     - =연산자는 딱 일치하는 1개 IN연산자는 여러개 가능
+    
+    9. like  연산자
+     - _ 임의의 문자
+     - % , 0~n 자리 문자 , %빠지면 무조건 두글자, 
+
+    10. 
+
+
+    </pre>
+    <hr>
+    <h4>2교시</h4>
+    <pre class="si">
+    1. 데이터가 없다? (사장이거나, 신입이거나)
+
+    2. AND 와 OR 절로 조건을 붙일 수 있다. 
+     1) and 두가지를 동시에 찾을려고 ~이고 ~이다 두가지 동시 true 일때만 true값
+
+     2) or 두가지 중 하나만 만족해도 나오는 것 둘다 false일경우만 false값
+
+     3) 연산자 우선순위 and 이기 때문에 그다음 or이다. 
+
+    3. &기호? 그리고의 의미를 지니긴 하다. 
+    
+    4. not in ( a,b) a,b 와 일치하지 않는 것
+
+    5. between a and b 는 a,b값 포함하지만
+     not 이 붙으면 a,b 값이 포함안된다 .(수학의 명제 반대)
+     - >= 의 not >= 는 &lt; 가 된다. 
+
+    6. not
+     - 대부분 not은 앞에 오지만
+     - is not null 로 is 다음에 not 이온다(아마도 문법에 맞추려고?)
+
+    7.  not like 패턴이 일치하지 않는 것 '%a%' (a가 없는 것)
+
+    8. order by 정렬 하는것, 정렬은 되어있으나 알수없는 방법이라서
+     우리가 정렬를 하고싶을때
+      -asc: ascending order, default
+    
+      -desc: descending order
+
+    9. 오름차순 내림차순
+      -입사일에있어서 내림차순은 최근일자
+     <table>
+         <tr>
+             <th></th>
+             <th>오름차순(작~큰)</th>
+             <th>내림차순(큰~작)</th>
+         </tr>
+         <tr>
+            <th>숫자</th>
+            <td>0-9</td>
+            <td>9-0</td>
+         </tr>
+         <tr>
+            <th>날짜</th>
+            <td>이전 -> 이후</td>
+            <td>이후 -> 이전</td>
+         </tr>
+         <tr>
+            <th>문자</th>
+            <td>a-></td>
+            <td>z-></td>
+         </tr>
+     </table>  
+
+     10. 정확한 컬럼과 행을 찍어내야 정보를 변수에 저장하고 하는 수월
+
+     <hr>
+     <h3>4교시</h3>
+     <pre class ="si">
+    1. order by 3; -> n; 번째 컬럼으로 정렬하라!
+    2. order by department_id, salary desc; 
+     - 똑같은 부서의 똑같은 중복값을 가진사람끼리 정리, 2차정리값(급여)로 정리
+     - distinct랑도 비슷??
+
+    3. select from, where, orderby는 완전히 이해하라!
+    4. desc 지우면 , asc말고 랜덤식으로 ??
+    5. hire date에서 범위는 and 다음에 또 무엇에 대한 범위인지 지정해줘야함 
+      그냥 hire_date &lt; '01-jan-04' and &gt; '31-dec-04' 이 아니라
+      hire_date &lt; '01-jan-04' and hire_date &gt; '31-dec-04' 
+    6. pct 를 받지 않는 사람은 null 값이긴 한데 
+     </pre>
+
+
+
+
+    </pre>
+
+
+            <h3>3. 추가이론내용 by생활코딩</h3>
+            <pre class ="si">
+                1) mysql에서 database 만들기 
+                 -create database 이름명
+                 -검색을 통해서 알아내라 .
+
+                2) 표만들기
+                 - SQL? structured 구조화, 정리정돈
+                        query db에게 data를 넣어줘, 삭제해줘등 요청,질의
+                        languese 컴퓨터 '언어'를 규칙에따라 문법따라
+                 - 하루에도 이것을 통해 수많은 정보를 접하고 있다. 가성비가 뛰어나다
+                 - 
+
+
+
+            </pre>
+         
+            <input type="button" value="다음페이지" onclick="
+               dbcla01_1next()">
+
+        
+
+
+        </article> <!--끝엔 한주 수업단위별-->
+
+
+    </section>
+
+    
+    
+</body>
+</html>

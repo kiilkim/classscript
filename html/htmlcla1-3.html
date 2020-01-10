@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="classhtmlcss.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+
+</head>
+
+<body class ="js-html-main">
+  
+
+    <script src="html12js.js">
+    </script>
+    <header>
+        <h1>HTML,CSS</h1>
+            <hr>
+            <h3>웹구조의 뼈대, 기본! 베이스가 튼튼해야 무너지지 않는다.</h3>
+            <hr>
+    </header>
+
+    <section>
+
+        <nav> <!--월별-->
+            <ul>
+                <li><a href = "htmlcla12.html">12월</a></li>
+                <hr>
+                <li><a href ="htmlcla1-1.html">1월</a></li>
+
+                <hr>
+                <li><a href ="htmlcla1.html">2월</a></li>
+                
+                <hr>
+                <li><a href ="htmlcla1.html">3월</a></li>
+                
+                <hr>
+                <li><a href ="htmlcla1.html">4월</a></li>
+                
+                <hr>
+                <li><a href ="htmlcla1.html">5월</a></li>
+                
+                <hr>
+                <li><a href ="htmlcla1.html">6월</a></li>
+                
+                <hr>
+            </ul>
+
+        </nav>
+        <article> <!--수업내용-->
+            <h2>[1월] 0102수업</h2>
+            <h3>7. table 가로 세로 넓히기</h3>
+            <p class ="si">
+                1) colspan="n" 가로로 넓히기 <br><br>
+                <table>
+                    <tr>
+                        <th>학과</th>
+                        <td colspan="3">빅데이터 활용 자바 파이썬 개발자</td>
+                    </tr>
+                
+                    <tr>
+                        <th>출석일자</th>
+                        <td>20200102</td>
+                        <th>수업교시</th>
+                        <td>5교시</td>
+                    </tr>
+              
+                </table>
+                <br>위와 같은 표를 만들려고 한다. <br>
+
+                <pre class = "si">
+                    <br>
+         이 3칸 이 합쳐져야 한다는 것을 직관적으로 알 수 있다.
+           ↓           ↓            ↓
+                    <table>
+                        <tr>
+                            <th>학과</th>
+                            <td colspan="3">빅데이터 활용 자바 파이썬 개발자</td>
+                        </tr>
+                    
+                        <tr>
+                            <th>출석일자</th>
+                            <td>20200102</td>
+                            <th>수업교시</th>
+                            <td>5교시</td>
+                        </tr>
+                  
+                    </table>
+                  
+
+                </pre>
+
+                <pre class ="si">
+       이렇게 만약 코딩을 한다면 
+                    
+                    &lt;table&gt;
+                        &lt;th&gt;학과&lt;/th&gt;
+                        &lt;td&gt;빅데이터 활용 자바 파이썬 개발자&lt;/td&gt;
+                        &lt;th&gt;출석일자&lt;/th&gt;
+                        &lt;td&gt;20200102&lt;/td&gt;
+                        &lt;th&gt;수업교시&lt;/th&gt;
+                        &lt;td&gt;5교시&lt;/td&gt;
+                    &lt;/table&gt;
+
+
+       이렇게 나올 것이다.
+       근데 뭔가 엉성하다. 그래서
+       위 코드에서 빅데이터 칸의
+       &lt;td colsapn = "3"&gt;를 해준다면. 어떻게 바뀌는지 확인해라.
+
+ ↓  th 부분                ↓ td 부분
+
+                    <table>
+                        <tr>
+                            <th>학과</th>
+                            <td>빅데이터 활용 자바 파이썬 개발자</td>
+                        </tr>
+                        <tr>
+                            <th>출석일자</th>
+                            <td>20200102</td>
+                            <th>수업교시</th>
+                            <td>5교시</td>
+                        </tr>
+                    </table>
+
+      확인 했다면, 제일 위의 표와 똑같이 나왔음을 알 수 있다.
+                </pre>
+
+
+
+
+                2) rowspan ="n" 세로로 넓히기 (좀어려움)<br><br>
+
+                <table>
+                    <tr>
+                        <td rowspan="2">a</td>
+                        <td>b</td>
+                    </tr>
+                
+                    <tr>
+                        <td>c</td>
+                    </tr>
+                </table>
+                위와 같은 표를 만들려고 한다.
+
+                <pre class ="si2" >
+
+↓ 이 부분이 합쳐야 한다는 것을 직관적으로  알 수 있다.
+                    <table>
+                        <tr>
+                            <td rowspan="2">a</td>
+                            <td>b</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>c</td>
+                        </tr>
+                    </table>
+
+  만약 이렇게 코딩을 한다면 , <br>
+  <img src="img/tableexplain2.jpg"><br>
+  다음 같을 것이다.<br>
+↓ 목적하는 곳이 여기를 넓혀 줘야 하므로, 첫번째 줄의 첫번째 td에 rowspan을 쓴다.
+                    <table>
+                        <tr>
+                            <td>a</td>
+                            <td>b</td>
+                        </tr>
+
+                        <tr>
+                            <td>c</td>
+                        </tr>
+                    </table>
+  <img src ="img/tableexplain.jpg">
+  이렇게 올바르게 했다면, 목적하는 표를 만들 수 있었을 것이다.
+
+ 
+
+                </pre>
+
+                <h3>* 예제 연습  </h3>
+                <table>
+                    <tr>
+                        <td>a</td>
+                        <td rowspan="3">d</td>
+                    </tr>
+                    <tr>
+                        <td>b</td>
+                    </tr>
+                
+                    <tr>
+                        <td>c</td>
+                    </tr>
+                 </table>
+
+                <hr>
+
+                <table>
+                    <tr>
+                        <th colspan="2">기타사항</th>
+                        <td>빈공간</td>
+                       
+                    </tr>
+            
+                    <tr>
+            
+                        <td rowspan="5">특기사항</td>
+                      
+                        
+                    </tr>
+                    <tr>
+                        <td>지각자</td>
+                        <td>빈공간</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>결석자</td>
+                        <td>빈공간</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>조퇴자</td>
+                        <td>빈공간</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>그밖의</td>
+                        <td>빈공간</td>
+                        
+                    </tr>
+             </table>
+
+             <br>
+             <hr>
+
+             <table>
+                <tr>
+            
+                    <th colspan="4">아이티윌게스트하우스</th>
+                
+                </tr>
+            
+                <tr>
+                    <th>방이름</th>
+                    <th>대상</th>
+                    <th>크기</th>
+                    <th>가격</th>
+                </tr>
+                <tr>
+                    <th>유채방</th>
+                    <td>여성 도미토리</td>
+                    <td rowspan="3">4dlstlf</td>
+                    <td rowspan="4">1인 20,000</td>
+                </tr>
+                <tr>
+                    <th rowspan="2">동백방</th>
+                    <td>남성도미토리</td>
+                </tr>
+                <tr>
+                    <td>가족1팀</td>
+            
+            
+                </tr>
+                <tr>
+                    <th colspan="2">천혜향방</th>
+                    <td>2인실</td>
+                </tr>
+                <tr>
+                    <th colspan="4">바깥채 단독:전화문의</th>
+                </tr>
+            
+            
+            
+            
+            
+            </table>
+
+            <hr>
+            <h1>◎자바 개발자반 시간표◎</h1>
+
+        <table>
+            <tr>
+                <th colspan="6">자바 개발자반</th>
+
+            </tr>
+
+            <tr>
+                <th colspan="2">오라클</th>
+                <th colspan="2">웹표준 UI</th>
+                <th colspan="2">애플리케이션</th>
+            </tr>
+            <tr>
+                <td rowspan="4">1교시<br>~<br>4교시</td>
+                <td rowspan="4">&lt;특강&gt;<br>강사-<br>홍길동</td>
+                <td colspan="2">1교시</td>
+                <td colspan="2">1교시</td>
+            </tr>
+
+            <tr>
+                <td colspan="2">2교시</td>
+                <td colspan="2">2교시</td>
+            </tr>
+            <tr>
+                <td colspan="2">3교시</td>
+                <td colspan="2">3교시</td>
+            </tr>
+            <tr>
+                <td colspan="2">4교시</td>
+                <td colspan="2">4교시</td>
+            </tr>
+          
+
+            <tr>
+                <td colspan="2">5교시</td>
+                <td rowspan="4">5교시<br>~<br>8교시</td>
+                <td rowspan="4">&lt;특강&gt;<br>강사-<br>홍길순</td>
+                <td colspan="2">5교시</td>
+            </tr>
+            <tr>
+                <td colspan="2">6교시</td>
+                <td colspan="2">6교시</td>
+
+            </tr>
+
+            <tr>
+                <td colspan="2">7교시</td>
+                <td rowspan="2">7교시<br>~<br>8교시</td>
+                <td rowspan="2">&lt;특강&gt;<br>강사-<br>김갑을</td>
+
+
+            </tr>
+
+            <tr>
+                <td colspan="2">8교시</td>
+
+            </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </table>
+            답을 보기 전에 한번 더 생각해보자!
+            <br>
+
+
+            <br><br><br><br><br>
+
+          
+            
+                    
+
+
+
+
+            
+            </p>
+            
+
+
+            
+            <input type="button" value="다음페이지" onclick="
+               html1next3()">
+
+        
+
+
+        </article> <!--끝엔 한주 수업단위별-->
+
+
+    </section>
+
+    
+    
+</body>
+</html>

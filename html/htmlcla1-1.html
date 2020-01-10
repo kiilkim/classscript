@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="classhtmlcss.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+    <style>
+        .table1 {
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+
+<body class ="js-html-main">
+  
+
+    <script src="html12js.js">
+    </script>
+    <header>
+        <h1>HTML,CSS</h1>
+            <hr>
+            <h3>웹구조의 뼈대, 기본! 베이스가 튼튼해야 무너지지 않는다.</h3>
+            <hr>
+    </header>
+
+    <section>
+
+        <nav> <!--월별-->
+            <ul>
+                <li href = "htmlcla12.html">12월</li>
+                <hr>
+                <li href = "htmlcla1.html">1월</li>
+                <hr>
+            </ul>
+
+        </nav>
+        <article> <!--수업내용-->
+            <h2>[1월] 0102 수업</h2>
+
+            <h3>5. table 사용법</h3>
+            <p class = "si">
+               1) 기본 테이블 만들기 <br><br>
+                <pre class = "si">
+                 &lt;table &gt; 
+                     &lt;tr&gt;
+                        &lt;th&gt;김기일 &lt;/th&gt;  
+                        &lt;td&gt;30세 &lt;td&gt;
+                     &lt;/tr&gt;
+                 &lt;/table&gt;
+                 </pre>
+
+                 일단 무작정 따라해보세! 다음과 같이 만든다면 모양은 <br>
+
+                 <table>
+                     <tr>
+                         <th>김기일</th>
+                         <td>30세</td>
+                     </tr>
+                 </table>
+
+                 이렇게 나온다. 근데 여기서 만약 칸을 치고 싶다면<br> <br>
+                 css를 살짝 적용해줘야 하는데, <br> <br>
+                 
+                 아까 css를 적용해주는 곳은 어디라고 했지? <br>  <br>
+                 그래 거기에가서 &lt;script&gt;를 선언하고 <br><br>
+                 다음과 같이 입력하면 된다. <br>
+                 
+                 <pre class ="si">
+                 table {
+                     border: 1px solid blak;
+
+                 }
+                 </pre>
+
+
+                 <table class = "table1">
+                    <tr>
+                        <th>김기일</th>
+                        <td>30세</td>
+                    </tr>
+                </table>
+
+
+                <br><br>
+
+                2) 각 테그 설명 <br><br>
+                 table : 표를 구성하는 가장 큰 테그<br><br>
+                 tr : 표에서 줄을 구성하는 태그<br><br>
+                 th : 제목칸을 만드는 태그 <br><br>
+                 td : 일반칸을 만드는 테그
+
+
+
+              
+
+
+
+               
+
+
+            
+            </p>
+          
+        
+            <input type="button" value="다음페이지" onclick="
+               html1next1()">
+
+               <br><br>
+
+        
+
+
+        </article> <!--끝엔 한주 수업단위별-->
+
+
+    </section>
+
+    
+    
+</body>
+</html>

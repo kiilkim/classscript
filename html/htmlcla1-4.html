@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="classhtmlcss.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+
+</head>
+
+<body class ="js-html-main">
+  
+
+    <script src="html12js.js">
+    </script>
+    <header>
+        <h1>HTML,CSS</h1>
+            <hr>
+            <h3>웹구조의 뼈대, 기본! 베이스가 튼튼해야 무너지지 않는다.</h3>
+            <hr>
+    </header>
+
+    <section>
+
+        <nav> <!--월별-->
+            <ul>
+                <li href = "htmlcla12.html">12월</li>
+                <hr>
+                <li href = "htmlcla1.html">1월</li>
+
+                <hr>
+                <li href = "htmlcla1.html">2월</li>
+                
+                <hr>
+                <li href = "htmlcla1.html">3월</li>
+                
+                <hr>
+                <li href = "htmlcla1.html">4월</li>
+                
+                <hr>
+                <li href = "htmlcla1.html">5월</li>
+                
+                <hr>
+                <li href = "htmlcla1.html">6월</li>
+                
+                <hr>
+            </ul>
+
+        </nav>
+        <article> <!--수업내용-->
+            <h2>[1월] 0109</h2>
+            <h3>1. 목록의 종류</h3>
+            <p class="si">
+
+     1) ul - unorder list<br>
+
+     - 5가지 type있음 disc/square/circle
+        <ul type ="disc">
+            <li>disc타입</li>
+        </ul>
+        <ul type ="square">
+            <li>square타입</li>
+        </ul>
+        <ul type ="circle">
+            <li>circle타입</li>
+        </ul>
+        <br>
+
+     2) ol - ordered list<br>
+     - 5가지 type이 있음 1, A, a, I, i
+        <ol type="1">
+            <li>1타입</li>
+            <li>1타입</li>
+        </ol><br>
+        <ol type="A">
+            <li>A타입</li>
+            <li>A타입</li>
+        </ol><br>
+        <ol type="a">
+            <li>a타입</li>
+            <li>a타입</li>
+        </ol><br>
+        <ol type="I">
+            <li>I타입</li>
+            <li>I타입</li>
+        </ol><br>
+        <ol type="i">
+            <li>i타입</li>
+            <li>i타입</li>
+        </ol><br>
+
+               
+            </p>
+
+            <h3>2. 글자와 관련된 태그들</h3>
+            
+            <p>
+            <ul type="square">
+                <li>b - bold체</li>
+                <li>i - italic체</li>
+                <li>strong - bold체 + 컴퓨터가 알아들으라고</li>
+                <li>eb - italic체 + 컴퓨터가 알아들으라고</li>
+                <li>small - 글씨작게</li>
+                <li>span - 글자의 일부분 묶어서 꾸미기 <br>
+                <span style="color: blue; font-size: 30px;">이렇게</span></li>
+                <li>sup - 윗첨자</li>
+                <li>sub - 아래첨자</li>
+                <li>주석 테그</li>
+                &lt;!-- --&gt;
+                
+
+
+            </ul>
+               
+
+
+            </p>
+
+            <h3>3. form 으로 상호작용하는 페이지 만들기 -jsp 겹침</h3>
+
+            <p> 
+               1) form의 선언<br><br>
+
+                - &lt;form&gt;로 선언하고 &lt;/form&gt;로 종료한다.<br><br>
+                - form에 variable인 action 을 사용하여 jsp로 파일로 정보를 보낼 수도 있으며<br>
+                 method 는 get(드러내는), post(숨김) 방식으로 데이터 전달 가능<br><br>
+                - &lt;form action = "blah.jsp" method ="get or post"&gt; 이런식으로 가능하다<br><br>
+
+
+                
+
+             
+               2) form tag 안의 태그와 변수, 타입<br>
+
+                - label : 컴퓨터에 인식을 시켜주는 태그 <br>
+                예를들어 다음과 같다고 하자<br>
+                name : <input type="text" id ="name"><br>
+                우리는 여기서 name 이 <input type="text" id ="name">창을 의미한다는 것을 알 수있다<br> 
+                하지만 컴퓨터는 인식을 못하기에 &lt;label&gt;를 쓰는 것이다.<br>
+                <br>
+                <label for ="name">name</label> <input type="text" id="name"><br>
+                같은 것처럼 보이지만 앞에 name에 다음과 같이 label을 썼다.<br>
+                &lt;label for ="name"&gt;name&lt;/label&gt; <br><br>
+                
+                - input 태그 : 버튼, 텍스트창, 패스워드 등등 form 과 함께쓰는<br>많은 기능의 기본 태그 <br>
+                - date type : <label>Birthday</label><input type="date"> 
+                - 데이터 입력제한 : maxlength <br> 
+                예를들어<br><label>ID: <input type="text" maxlength="8" 
+                size="20"></label> <br>
+                위의 박스에는 8칸 밖에 못쓴다. maxlength="n"으로 설정해놨기 때문이다.<br>
+                -password type: <label>pass:<input type="password" maxlength="8"> </label><br>
+
+                - checkbox tyep : checkbox를 만들 수 있다.<br>
+                 &lt;input type="checkbox"&gt; 로 만들 수 있다. <br>
+                 <input type="checkbox"> 도보 <br>
+                 <input type="checkbox"> 자전거 <br>
+                 <input type="checkbox"> 지하철 <br>
+                 <input type="checkbox"> 자가용 <br>
+                 그중 보통 많이 사용할 것 같은 곳에 "checked"변수를 써서 미리체크 가능<br>
+                 &lt;input type="checkbox" checked="checked"&gt;비행기 <br>
+                 그리고 변수 submit과 reset 으로 입력했던 데이터를 제출할수도, 다 지울수도 있다<br>
+                
+                 <br>
+                 -textarea : 많은 것들을 쓸 수 있는 태그로 'cols', 'rows'로 쓸 만큼의 길이를<br>
+                 조절 할 수 있다.<br><br>
+
+                 -select 태그 (내용 많음)<br><br>
+                 -&lt;select&gt; 선언한다. 그럼? 닫아야지?
+
+                 고르는것 'select'
+                 <select>
+                
+        
+                     <option>web</option>
+                     <option>jsp</option>
+                     <option>java</option>
+                     <option>db</option>
+                 </select><br><br>
+
+                 -multipe 변수로 '다중선택'을 만들 수 있다.<br>
+                 &lt;select multiple&gt;라고 써준다. 그러면 다음과 같다<br>
+
+                 <select multiple>
+                    <option>web</option>
+                    <option>jsp</option>
+                    <option selected>java</option>
+                    <option>db</option>
+                </select><br><br>
+                
+                그리고 option 태그 뒤에 selected라는 변수를 쓰면 그 부분만 색이 입혀진다<br>
+
+                - outgroup 태그 : select 안에서도 분류 할 수 있다 <br>
+                select 태그 속에서다음과 같이 쓸 수 있다. <br>
+                <img src="img/select.jpg"> <br>
+                결과는 다음과 같다.<br>
+
+                <select>
+                    <optgroup label="jsp">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                  </optgroup>
+                  <optgroup label="web">
+                      <option>5</option>
+                      <option>6</option>
+                      <option>7</option>
+                      <option>8</option>
+                  </optgroup><br><br>
+
+                -size 변수를 이용하여 얼마나 길게 나타낼 것인가도 나타낼 수 있다.<br>
+
+
+
+
+                
+             
+
+               <form action = "blah.jsp" method = "post"> 
+                
+
+               </form> 
+
+
+
+            </p>
+            <input type="button" value="다음페이지" onclick="
+               html12next(a)">
+
+        
+
+
+        </article> <!--끝엔 한주 수업단위별-->
+
+
+    </section>
+
+    
+    
+</body>
+</html>

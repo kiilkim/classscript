@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="classhtmlcss.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+
+</head>
+
+<body class ="js-html-main">
+  
+
+    <script src="html12js.js">
+    </script>
+    <header>
+        <h1>JAVA</h1>
+            <hr>
+            <h3>웹의 여러가지 기능을 제어하는 것. 응용.</h3>
+            <hr>
+    </header>
+
+    <section>
+
+        <nav> <!--월별-->
+            <ul>
+                <li><a href ="javacla12.html">12월</a></li>
+                <hr>
+                <li><a href ="javacla01.html">1월</li>
+
+                <hr>
+                <li><a href ="javacla02.html"></a>2월</li>
+                
+                <hr>
+                <li><a href ="javacla03.html"></a>3월</li>
+                
+                <hr>
+                <li><a href ="javacla04.html"></a>4월</li>
+                
+                <hr>
+                <li><a href ="javacla05.html"></a>5월</li>
+                
+                <hr>
+                <li><a href ="javacla06.html"></a>6월</li>
+                
+                <hr>
+            </ul>
+
+        </nav>
+        <article> <!--수업내용-->
+            <h2>[1월] 0107</h2>
+            <h3>1. 연산자(1~2교시)</h3>
+
+            <pre class = "si">
+    1) 산술연산자 +,-,*,/,%
+     - 일반 사칙연산자와 동일
+     - %연산자 : 나머지 
+
+
+    2) 예제
+        System.out.println(10 + 2);
+        System.out.println(10 - 2);
+        System.out.println(10 * 2);
+        System.out.println(10 / 2); // 10 을 2로 나눈 몫 계산(5)
+        System.out.println(10 % 2); // 10 을 2로 나눈 나머지 계산(0) 
+
+        int a = 10, b = 3, c; 라 정의하고 
+        c = a + b;
+        c = a - b;
+        c = a * b;
+        c = a / b;
+        c = a % b;
+        를 println, printf로 나타내어라 십진수 사용
+
+
+    3) 연산시 자동 형변환
+     - 피연산자끼리 데이터 타입 일치시킨 후
+     - 규칙1. int 타입보다 작은것은 모두 int로 통일 후, 따라서 결과는 모두 int
+      ex) byte + byte = (int)byte + (int)byte 연산
+      ex2) char + int = (int)char + int = int
+
+     - 규칙2. int보다 큰 타입은 큰타입으로 변환 후
+      ex) int + long = (long)int + long = long
+      ex2) int + double = (double)int + double = double 
+
+    - byte b1 = 10, b2 = 20, b3;
+      System.out.println(b1 + b2);
+
+    - b3 = b1 + b2 ; 왜 오류 일까? 오류 안나게 고치면? 고치고 출력
+    <strong>- char ch = 'A'
+      char ch2 = ch + 2; 왜 오류 일까? 오류 고치고 출력</strong>
+    - int i = 100;
+      long l = 200;
+      int i2 = i + l ; 왜 오류 일까? 고치고 출력 하려면?(두가지)
+      float f = 3.14f;
+      long l2 = l + f; 왜 오류일까? 고치고 출력!
+
+    -10/3출력 
+     int/int 이므로 int
+    -10/3.0 으로 하면 .3333 나옴
+    -10/3f;
+
+    -float f1 =0.1f;
+     double d1 =0.1;
+
+     f1+d1 출력하면 왜 오류? 고쳐서 할려면?
+
+    </pre>
+
+     <hr>
+
+     <h3>2. 대입연산자 (3~4교시)</h3>
+    <pre class="si">
+    
+    1) 대입연산자(=)
+     - 우변의 데이터를 좌변의 변수에 대입 (저장)
+     - 연산방향이 우->좌 임
+     ex) x=y=3 인경우?
+     - 모든 연산자 중에서 우선순위가 가장 낮다.
+     
+    2) 확장 대입연산자 (+=, -=, *=, /=, %=)
+     - 대입연산자와 산술연산자를 조합
+     - 좌변과 우변의 데이터끼리 ;산술연산 먼저한; 후 좌변에대입
+
+    3) 예제
+     - int a = 10, b; 
+    b = a; // 변수 a의 값을 b 에 대입
+    System.out.println(b);
+    
+    // b + a 의 결과를 다시 변수 b 에 저장 => b 에 a 값을 누적하는 것과 동일
+    b += a; // b = b + a 와 동일 (10 + 10 = 20)
+    System.out.println(b);
+    
+    // b = b - a
+    b -= a; // b = b + a 와 동일 (20 - 10 = 10) 
+    System.out.println(b);
+    
+    // b = b * a
+    b *= a; // b = b + a 와 동일 (10 * 10 = 100)
+    System.out.println(b);
+    
+    // b = b / a
+    b /= a; // b = b + a 와 동일 (100 / 10 = 10)
+    System.out.println(b);
+    
+    // b = b % a 
+    b %= a; // b = b + a 와 동일 (10 % 10 = 0)
+    System.out.println(b);
+
+
+    </pre>
+    <hr>
+
+         <h3>3. 비교연산자 (3~4교시)</h3>
+         
+          <pre class = "si">
+    1) 비교연산자(관계 연산자) (>, >=, &lt;=, &lt;, ==, != )
+     -두 피연산자간의 대소관계 비교 true, false 값
+
+    2) 예제
+    int a = 10, b = 5;
+		
+    System.out.println("a > b 인가? " + (a > b));
+    System.out.println("a >= b 인가? " + (a >= b));
+    System.out.println("a &lt;= b 인가? " + (a &lt;= b));
+    System.out.println("a &lt; b 인가? " + (a &lt; b));
+    System.out.println("a == b 인가? " + (a == b));
+    System.out.println("a != b 인가? " + (a != b));
+    System.out.println("-----------------");
+    
+    // char 타입을 비교연산자에 사용 시 정수(유니코드)값을 비교
+    System.out.println('A' > 'B'); // 'A'(65) 는 'B'(66) 보다 작으므로 false 리턴됨
+    System.out.println('A' == 65);
+    
+    System.out.println(3 == 3.0); // int 와 double 의 경우 int 를 double 로 변환 후 비교
+    
+    System.out.println(0.1 == 0.1f); // 근사치 표현에 의해 서로 다른값으로 취급됨
+    System.out.println((float)(0.1) == 0.1f); // double -> float 로 변환 후 비교 true
+            
+
+
+         </pre>
+<hr>
+
+         <h3>4. 논리연산자 (3~4교시)</h3>
+
+         <pre class ="si">
+    1) &&, ||, !, ^ 
+     -두 피연산자 간의 논리적인 판별 수행
+     -피연산자는 모두 boolean타입 데이터만 사용가능, 결과값도 boolean값
+
+    2) And 연산자(논리곱)
+     -true true 외엔 모두 false
+     -F and F = F  , F and T = F  , T and F = F ,  T and T = T
+     -&&두개인 이유는 앞이 F 이면 그냥 F로 나타내기 위함
+
+    3) Or 연산자(논리합)\
+     -false false 외엔 모두 true
+     -F and F = F  , F and T = T  , T and F = T ,  T and T = T
+     -|| 두개인 이유는 앞이 T이면 그냥 T로 빠르게 계산
+
+    4) ^ 연산자 (베타적 논리합)
+     - 두 피연산자가 서로 다를 때 true, 같으면 false
+     - F XOR F = False , F XOR T = True , T XOR F = True , T XOR T = False
+
+    5) !연산자 (논리부정)
+     - 단항연산자로, 현재값을 반대로
+     - False 면 True, True면 False
+     
+
+    6) 예시
+    boolean a = false;
+    boolean b = true;
+    
+    System.out.println("a(false) && a(false) = " + (a && a));
+    System.out.println("a(false) && b(true) = " + (a && b));
+    System.out.println("b(true) && a(false) = " + (b && a));
+    System.out.println("b(true) && b(true) = " + (b && b));
+    
+    System.out.println();
+    
+    System.out.println("a(false) || a(false) = " + (a || a));
+    System.out.println("a(false) || b(true) = " + (a || b));
+    System.out.println("b(true) || a(false) = " + (b || a));
+    System.out.println("b(true) || b(true) = " + (b || b));
+    
+    System.out.println();
+    
+    System.out.println("!a(false) = " + (!a));
+    System.out.println("!b(true) = " + (!b));
+    
+    System.out.println();
+    
+    System.out.println("a(false) ^ a(false) = " + (a ^ a));
+    System.out.println("a(false) ^ b(true) = " + (a ^ b));
+    System.out.println("b(true) ^ a(false) = " + (b ^ a));
+    System.out.println("b(true) ^ b(true) = " + (b ^ b));
+
+    
+         </pre>
+         <hr>
+
+         <h3>5. 증감연산자</h3>
+
+         <pre class ="si">
+    - 단항 연산자 
+    - 피연산자의 앞 또는 뒤에 붙어서 같을 1만큼 증가 ,감소
+    - 다른연산과 결합시, 전위, 후위냐에 따라 다른 결과
+    - 증감연산자 자체 명령어가 따로 있음
+    - 산술연산등을 통한 1증가또는 감소 방법과 속도에서 차이 ,즉 증감이더 빠르다.
+
+    1) 선행연산자(전위)
+     - 피연산자의 앞에 붙여 1증가또는 감소
+     - 먼저 피연산자의 값을 증가 또는 감소 후 다른 연산에 참여
+
+    <strong>2) 후행연산자(후위, 어려움)
+     - 피연산자 뒤쪽(우측)에 붙어서 1증가 또는 감소
+     - 피연산자 먼저 다른연산에 참여 시킨후 피연산자 값 1증가감소</strong>
+     \
+
+    3) 예시
+
+    int i = 5;
+    i++; // i값을 1 증가시킴 5 -> 6  =>  i = i + 1 과 동일함
+    System.out.println(i);
+    
+    ++i; // i값을 1 증가시킴 6 -> 7  =>  i = i + 1 과 동일함
+    System.out.println(i);
+    
+    i--; // i값을 1 감소시킴 7 -> 6  =>  i = i - 1 과 동일함
+    System.out.println(i);
+    
+    --i; // i값을 1 감소시킴 6 -> 5  =>  i = i - 1 과 동일함
+    System.out.println(i);
+    
+    System.out.println(++i); // i 가 5 -> 6 으로 증가한 후 출력되므로 6 출력됨
+    System.out.println(i++); // i(6) 를 출력한 후 증가시키므로 7 이됨
+    System.out.println(i); // 증가된 값 7 출력됨
+    
+    System.out.println("-------------");
+    
+    int x1 = 5;
+    int y1 = ++x1; // 전위연산자(선행연산자)
+    // => x1 의 값을 먼저 1만큼 증가시킨 후 대입연산자를 통해 x1 값을 y1 에 대입
+    // => 따라서, x1 이 5 -> 6 으로 변경된 후 y1 에 x1 을 저장하므로 y1 도 6이 저장됨
+    System.out.println(x1 + ", " + y1); // x1 = 6, y1 = 6
+    
+    <strong>int x2 = 5;
+    int y2 = x2++; // 후위연산자(후행연산자)
+    // => x2 의 값을 먼저 y2 에 대입한 후, x2 의 값을 1 만큼 증가시킴
+    // => 따라서, x2 가 5 일 때 y2 에 대입된 후, x2 의 값을 5 -> 6 으로 변경
+    System.out.println(x2 + ", " + y2); // x2 = 6, y2 = 5</strong>
+    
+    System.out.println("-------------------");
+    
+    int x = 10, y = 5;
+    int z = ++x + y--; // x = 11, y = 5 일 때 z = 11 + 5 = 16 이되고, y 는 4로 1 감소
+    System.out.println(x + ", " + y + ", " + z);
+    
+    System.out.println("--------------------");
+    
+    byte b1 = 10;
+//		b1 = b1 + 1; // byte + int = int 이므로 byte 타입에 저장 불가
+    b1 = (byte)(b1 + 1); // 형변환 필수!
+    System.out.println(b1);
+    
+    b1 += 1; // 복합대입연산자 사용 시 자동 형변환이 발생하지 않으므로 오류 X
+    System.out.println(b1);
+    
+    b1++; // 증감연산자 사용 시에도 자동 형변환이 발생하지 않으므로 오류 X
+    System.out.println(b1);
+    
+    <hr>
+    질문0. 변수명 규칙
+
+    질문1. 연산자 중에
+     변수의 값을 1만큼 ++1 --1 증감연산자 
+     대입연산자 해서
+
+    질문1-1. a++, ++a, 
+     
+    질문2. int &lt;-float 일때 형변환 어디에 고쳐야하나?
+    
+    질문3. and 연산자 논리곱 t&t = t 
+
+    질문4. or - 하나라도 true 면 true, 둘다 false 면 false
+
+    , ^ 서로다르면 true, 같으면 false
+    , Xor 
+
+    질문5. 가장 나중 연산? '대입연산자' =
+        a*2 = 2ㄴ
+
+    질문6.
+
+
+         </pre>
+            <input type="button" value="다음페이지" onclick="
+               java01_2next1()">
+
+        
+
+
+        </article> <!--끝엔 한주 수업단위별-->
+
+
+    </section>
+
+    
+    
+</body>
+</html>
