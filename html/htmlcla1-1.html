@@ -30,79 +30,84 @@
 
         <nav> <!--월별-->
             <ul>
-                <li href = "htmlcla12.html">12월</li>
+                <li><a href = "htmlcla12.html">12월</a></li>
                 <hr>
-                <li href = "htmlcla1.html">1월</li>
+                <li><a href ="htmlcla1-1.html">1월</a></li>
+
+                <hr>
+                <li><a href ="htmlcla1.html">2월</a></li>
+                
+                <hr>
+                <li><a href ="htmlcla1.html">3월</a></li>
+                
+                <hr>
+                <li><a href ="htmlcla1.html">4월</a></li>
+                
+                <hr>
+                <li><a href ="htmlcla1.html">5월</a></li>
+                
+                <hr>
+                <li><a href ="htmlcla1.html">6월</a></li>
                 <hr>
             </ul>
 
         </nav>
+
         <article> <!--수업내용-->
             <h2>[1월] 0102 수업</h2>
 
-            <h3>5. table 사용법</h3>
-            <p class = "si">
-               1) 기본 테이블 만들기 <br><br>
-                <pre class = "si">
-                 &lt;table &gt; 
-                     &lt;tr&gt;
-                        &lt;th&gt;김기일 &lt;/th&gt;  
-                        &lt;td&gt;30세 &lt;td&gt;
-                     &lt;/tr&gt;
-                 &lt;/table&gt;
-                 </pre>
-
-                 일단 무작정 따라해보세! 다음과 같이 만든다면 모양은 <br>
-
-                 <table>
-                     <tr>
-                         <th>김기일</th>
-                         <td>30세</td>
-                     </tr>
-                 </table>
-
-                 이렇게 나온다. 근데 여기서 만약 칸을 치고 싶다면<br> <br>
-                 css를 살짝 적용해줘야 하는데, <br> <br>
-                 
-                 아까 css를 적용해주는 곳은 어디라고 했지? <br>  <br>
-                 그래 거기에가서 &lt;script&gt;를 선언하고 <br><br>
-                 다음과 같이 입력하면 된다. <br>
-                 
-                 <pre class ="si">
-                 table {
-                     border: 1px solid blak;
-
-                 }
-                 </pre>
+            <h2>1. table 사용법</h2>
+            <pre class = "si">
+         1) 기본 테이블 만들기 
+    
+        &lt;table &gt; 
+            &lt;tr&gt;
+                &lt;th&gt;김기일 &lt;/th&gt;  
+                &lt;td&gt;30세 &lt;td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
 
 
+        일단 무작정 따라해보자! 다음과 같이 만든다면 모양은 
+
+                <table class = "tablenone">
+                    <tr >
+                        <th class ="thnone">김기일</th>
+                        <td class ="tdnone">30세</td>
+                    </tr>
+                </table>
+
+        위와같이 나온다. th는 테이블 제목이므로 bold체로 나온다<br>
+        근데 여기서 만약 칸을 치고 싶다면<br> 
+        css를 살짝 적용해줘야 하는데, <br> 
+        아까 css를 적용해주는 곳은 어디라고 했지?   답 드래그-> <span style= "color:whitesmoke">head</span><br>
+        그래 거기에가서 &lt;script&gt;를 선언하고 &lt;/script&gt; 닫아주고<br>
+        다음과 같이 입력하면 된다. <br>
+        
+   
+        table {
+            border: 1px solid blak;
+
+        }
+            
                  <table class = "table1">
                     <tr>
                         <th>김기일</th>
                         <td>30세</td>
                     </tr>
                 </table>
+        과 같은 결과를 얻을 수 있을 것이다.
+        
 
-
-                <br><br>
-
-                2) 각 테그 설명 <br><br>
-                 table : 표를 구성하는 가장 큰 테그<br><br>
-                 tr : 표에서 줄을 구성하는 태그<br><br>
-                 th : 제목칸을 만드는 태그 <br><br>
-                 td : 일반칸을 만드는 테그
-
-
-
-              
-
-
-
-               
+        2) 각 테그 설명 <br>
+            table : 표를 구성하는 가장 큰 테그<br>
+            tr : 표에서 줄을 구성하는 태그<br>
+            th : 제목칸을 만드는 태그 <br>
+            td : 일반칸을 만드는 테그
 
 
             
-            </p>
+            </pre>
           
         
             <input type="button" value="다음페이지" onclick="

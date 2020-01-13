@@ -55,7 +55,7 @@
 
      1) ul - unorder list<br>
 
-     - 5가지 type있음 disc/square/circle
+     - 3가지 type있음 disc/square/circle
         <ul type ="disc">
             <li>disc타입</li>
         </ul>
@@ -134,8 +134,7 @@
                2) form tag 안의 태그와 변수, 타입<br>
 
                 - label : 컴퓨터에 인식을 시켜주는 태그 <br>
-                예를들어 다음과 같다고 하자<br>
-                name : <input type="text" id ="name"><br>
+                예를들어 다음과 같다고 하자 ->  name : <input type="text" id ="name"><br>
                 우리는 여기서 name 이 <input type="text" id ="name">창을 의미한다는 것을 알 수있다<br> 
                 하지만 컴퓨터는 인식을 못하기에 &lt;label&gt;를 쓰는 것이다.<br>
                 <br>
@@ -143,8 +142,8 @@
                 같은 것처럼 보이지만 앞에 name에 다음과 같이 label을 썼다.<br>
                 &lt;label for ="name"&gt;name&lt;/label&gt; <br><br>
                 
-                - input 태그 : 버튼, 텍스트창, 패스워드 등등 form 과 함께쓰는<br>많은 기능의 기본 태그 <br>
-                - date type : <label>Birthday</label><input type="date"> 
+                - input 태그 : 버튼, 텍스트창, 패스워드 등등 form 과 함께쓰는 많은 기능의 기본 태그 <br>
+                - date type : <label>Birthday</label><input type="date"> <br>
                 - 데이터 입력제한 : maxlength <br> 
                 예를들어<br><label>ID: <input type="text" maxlength="8" 
                 size="20"></label> <br>
@@ -159,19 +158,22 @@
                  <input type="checkbox"> 자가용 <br>
                  그중 보통 많이 사용할 것 같은 곳에 "checked"변수를 써서 미리체크 가능<br>
                  &lt;input type="checkbox" checked="checked"&gt;비행기 <br>
+                 <input type="checkbox" checked="checked"> 비행기 <br>
                  그리고 변수 submit과 reset 으로 입력했던 데이터를 제출할수도, 다 지울수도 있다<br>
                 
                  <br>
                  -textarea : 많은 것들을 쓸 수 있는 태그로 'cols', 'rows'로 쓸 만큼의 길이를<br>
                  조절 할 수 있다.<br><br>
+                 <textarea rows="5" cols="5">
+
+                 </textarea><br><br>
 
                  -select 태그 (내용 많음)<br><br>
                  -&lt;select&gt; 선언한다. 그럼? 닫아야지?
 
                  고르는것 'select'
+
                  <select>
-                
-        
                      <option>web</option>
                      <option>jsp</option>
                      <option>java</option>
@@ -225,9 +227,11 @@
 
 
             </p>
+            <br>
             <input type="button" value="다음페이지" onclick="
                html12next(a)">
-
+                <br>
+                
         
 
 

@@ -26,6 +26,10 @@
             width: 25%;
         }
     
-    .js-main-body {
+    .js-index-body {
         text-align: center;
+    }
+    
+    hr {
+        border: 2px solid black;
     }

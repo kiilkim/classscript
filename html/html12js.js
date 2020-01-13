@@ -1,5 +1,8 @@
+//html 버튼
+
 function html12next() {
     prompt('html문서에서 css, font 등 효과를 주는 선언은?');
+
 //만약 답이 head인데 다른거 쓰면 다시한번 생각해보라는 문구
     /*  if (head==true) {
         window.location.href='htmlcla12-1.html'
@@ -10,7 +13,7 @@ function html12next() {
 
 function html12next2() {
     prompt('제목테그는 뭘까요?');
-    window.location='htmlcla12-2.html';
+    window.location='htmlcla1-1.html';
     
 
 }

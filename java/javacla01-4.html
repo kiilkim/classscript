@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="classhtmlcss.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+
+</head>
+
+<body class ="js-html-main">
+  
+
+    <script src="html12js.js">
+        
+    </script>
+    <header>
+        <h1>JAVA</h1>
+            <hr>
+            <h3>웹의 여러가지 기능을 제어하는 것. 응용.</h3>
+            <hr>
+    </header>
+
+    <section>
+
+        <nav> <!--월별-->
+            <ul>
+                <li><a href ="javacla12.html">12월</a></li>
+                <hr>
+                <li><a href ="javacla01.html">1월</li>
+
+                <hr>
+                <li><a href ="javacla02.html"></a>2월</li>
+                
+                <hr>
+                <li><a href ="javacla03.html"></a>3월</li>
+                
+                <hr>
+                <li><a href ="javacla04.html"></a>4월</li>
+                
+                <hr>
+                <li><a href ="javacla05.html"></a>5월</li>
+                
+                <hr>
+                <li><a href ="javacla06.html"></a>6월</li>
+                
+                <hr>
+            </ul>
+
+        </nav>
+        <article> <!--수업내용-->
+            <h2>[1월] 0113</h2>
+            <h3>1. 조건문</h3>
+            <pre class="si">
+    1) 특정 조건에 따라 문장의 실행여부
+    2) 단일 if
+     - 조건식에 따라 문장 실행여부 결정
+     - 조건식 판결결과가 true 면 {} 바로 실행
+                        false 면 {} 생략함
+    3) 기본문법
+     - 문장1;
+     - if(조건식) {
+         문장2; 조건식=true 일때 실행
+     } 
+     - 문장3; 조건식 =false 인경우 실행
+     -> 빵1개 쓰면 체력+10, ~를 해결한다면, 점수+100 등  
+
+    4) 예시
+     - 정수형 변수 num의 값이 5보다 크면 "num이" 5보다 크다!" 출력
+
+     - 답:<span style="color: whitesmoke;">
+        if(num > 5) { // 조건식
+			// 문장2(조건식 결과가 true 일 때 실행)
+			System.out.println("num 이 5보다 크다!"); 
+		}
+		
+		System.out.println("정수 num = " + num); // 문장3
+         </span>
+           </pre>
+
+           <hr>
+  <h3>2. if ~ else</h3>
+
+            
+            <pre class ="si">
+    1) 조건식 판별 결과에 따라 서로 다른 문장 실행
+    2) 조건식 판별 결과가 true 면 if문 {} 을 실행
+                         false 면 else문 {} 을 실행
+    3) 삼항연산자와 비슷한 형태 is ~ else가 더 상위 조건문
+
+    4) 기본문법
+     - 문장1;
+     - if(조건식) {
+        문장2; 조건식=true
+     } else {
+        문장3; 조건식=false
+     }
+     - 문장 4;
+       
+    5) 예시
+     -int num = 5;
+     -정수형 변수 num의 값이 5보다 크면 "num이 5보다크다!"출력
+     아니면 "num이 5보다 크지 않다!" 출력
+     - 답 :<span style="color:whitesmoke">
+        if(num > 5) {
+			// 조건식 판별 결과가 true 일 때 실행할 문장들... (문장2)
+			System.out.println("num 이 5보다 크다!");
+		} else {
+			// 조건식 판별 결과가 false 일 때 실행할 문장들... (문장3)
+			System.out.println("num 이 5보다 크지 않다!");
+		}
+		
+		System.out.println("정수 num = " + num); // 문장4
+         </span>
+
+
+            </pre>
+            <hr>
+            <h3>3. if ~ else if ~ else</h3>
+            <pre class ="si">
+    1) 두가지 이상의 조건식을 차례대로 판별
+    2) 세가지 이상의 경우를 판별하는 조건문
+    3) 기본문법
+     -if(조건식1) {
+         문장1; 조건식1의 결과가 true
+     } else if(조건식2) {
+         문장2; 조건식1 =false ,조건식2=true경우
+     } else if(조건식n {
+         문장3; 조건식1,조건식2=false 고 조건식n의 결과가 true경우
+     } else {
+         문장x; 모든 조건식 결과가 false일때 실행할 문장들(생략가능)
+     }
+
+     4) 예시
+     - 정수 num이 5보다 크다 or 5보다 작다 or 5와 같다.
+     - 답: <span style="color: whitesmoke;">
+        if(num > 5) { // num 이 5보다 클 경우
+			System.out.println("num 이 5보다 크다!");
+		} else if(num &lt; 5) { // num 이 5보다 크지 않고, 작을 경우
+			System.out.println("num 이 5보다 작다!");
+		} else { // num 이 5보다 크지도, 작지도 않을 경우 = 같을 경우
+			System.out.println("num 이 5와 같다!");
+		}
+		
+		System.out.println("num = " + num);
+    
+        </span>
+
+            </pre>
+            <hr>
+            <h3>4. 중첩 if</h3>
+            <pre class="si">
+    1) if문 내에서 또 다른 if문을 기술하는 것
+    ( else 블록 내에서도 가능)
+
+    2) 기본문법
+     -if(조건식1) {
+         조건식1이 true일때 실행할 문장들
+      if (조건식1-2){
+        조건식1이 true이고, 조건 1-2가 true일때,  실행할 문장들
+     } else {
+         조건식 1이 true, 조건식 1-2가 false 일때 실행
+     }
+    } else {
+        조건식 1이 false 일때 실행할 문장
+    }
+
+    3) 예시
+     -int score =98;
+     -String grade="";
+     -정수 0~100사이 학점계산
+     아니면 점수입력오류
+
+     - 답 : <span style="color:whitesmoke">
+        if(score >= 0 && score &lt;= 100) {
+			if(score >= 90) { // 상위 if문에서 100 이하를 판별했으므로 90 이상만 판별하면 됨
+				grade = "A";
+			} else if(score >= 80) {
+				grade = "B";
+			} else if(score >= 70) {
+				grade = "C";
+			} else if(score >= 60) {
+				grade = "D";
+			} else { 
+				grade = "F";
+			}
+			
+			System.out.println(score + "점의 학점 : " + grade);
+		} else {
+			System.out.println(score + "점 : 점수 입력 오류!");
+		}
+		
+	}
+
+}
+ </span>
+       
+
+            </pre>
+            <hr>
+            <h3>Test</h3>
+            <pre class="si">
+    1. 정수형 변수 num값에 대해 절대갑 계산하여 출력하기
+     변수 num이 5일때 변수 num=5 출력
+     변수 num이 -5일때, 음수를 양수로 절대값 변환한후 변수num=5출력
+
+     답:<span style="color:whitesmoke">
+        int num = -5;
+		
+		// 조건식 판별을 통해 변수 num 이 음수일 때 양수로 변환(절대값 계산) - 문장2
+		if(num &lt; 0) { // 조건식
+			// 문장2
+			System.out.println("num = " + num + " 이므로 양수로 변환!");
+			num = -num; // 음수 -> 양수 변환
+        }
+        
+    2. 문자 ch가 대문자 일 때 소문자로 변환하여 출력
+      답:<span style="color:whitesmoke">
+        char ch = 'r'; // 문장1
+		
+		if(ch >= 'A' && ch &lt;= 'Z') { // 조건식
+			ch += 32; // 문장2(소문자로 변환)
+		}
+		
+		System.out.println("ch = " + ch); // 문장3
+        
+        </span>
+        
+    3. 정수형 변수 num에 대한 양수, 음수 판별(0은 양수에 포함)
+
+     답: <span style="color: whitesmoke;">
+        int num = 10;
+		
+		// 정수형 변수 num 에 대한 양수, 음수 판별(0은 양수에 포함시킴)
+		if(num >= 0) {
+			System.out.println(num + " : 양수!");
+		} else {
+			System.out.println(num + " : 음수!");
+		}
+        </span>
+
+    4. 문자 ch가 대문자면 소문자로 변환, 아니면 대문자로 변환
+      답: 너무 쉬워서 생략
+      
+    5. 정수형 변수 num에 대해 양수,음수,0판별
+      답:<span style="color: whitesmoke;">
+        int num = 0;
+		
+		if(num > 0) {
+			System.out.println(num + " : 양수!");
+		} else if(num &lt; 0) {
+			System.out.println(num + " : 음수!");
+		} else {
+			System.out.println(num + " : 0!");
+        }
+        
+    6. 정수형 변수 num에 대해 홀수,짝수, 0판별법
+
+    7. 문자ch가 대문자일 경우 소문자로 변환, 소문자일경우 대문자로, 아니면 "아니다!"
+     
+    8. 학생 점수에 대해 학점 판별
+     답:<span style="color: whitesmoke;">
+    
+    9. 문자 ch에 대해 대&lt;->소문자 변환후 출력
+    ch가 영문자가 아닐경우 입력오류!
+         
+     </span>
+
+
+
+
+            </pre>
+
+
+            <input type="button" value="다음페이지" onclick="
+               java01_5next()">
+
+<span style="color: whitesmoke;">
+         
+</span><span style="color: whitesmoke;">
+         
+</span>
+        
+
+
+        </article> <!--끝엔 한주 수업단위별-->
+
+
+    </section>
+
+    
+    
+</body>
+</html>
