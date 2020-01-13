@@ -90,6 +90,61 @@ function record() {
     location.record();
 }
 
+//0113 jsp 실행 버튼
+function radioTrans() {
+     if(document.fr1.ra[0].checked==false && document.fr1.ra[1].checked==false) {
+        alert("체크박스 선택하세요");
+        document.fr1.ra[0].focus();
+        return;
+     }
+     
+}
+
+function sel1() {
+    alert(document.fr2.sel.name);
+    alert(document.fr2.sel.type);
+	alert(document.fr2.sel.length);
+    alert(document.fr2.sel.selectedIndex);
+    document.fr2.sel.focus()
+    document.fr2.sel.blur()
+
+}
+
+function opt1() {
+    alert(document.fr2.sel.option[0].value);
+    alert(document.fr2.sel.option[0].text);
+    alert(document.fr2.sel.option[0].selected); //선택이 되어있는지 되어있으면 true, false
+}
+//첫번째 목록선택이 되어있으면, 
+function pracice() {
+     if(document.fr2.sel.option[0].selected==true) {
+        alert("목록선택하세요");
+        document.fr2.sel.option[0].focus();
+        return; 
+     }
+
+}
+/* document.폼이름.목록상자이름.변수            
+                                            document.fr2.sel.name
+                                            document.fr2.sel.type //한개선택할건지,여러개인지
+                                            document.fr2.sel.length //목록의 개수? 길이?
+                                            document.fr2.sel.selectedIndex//선택되어진 순서
+                                            document.fr2.sel.options[0]//목록상자의 option태그
+
+
+document.폼이름.목록상자이름.options[0] //옵션이 3개니까 0,1,2번호 / 
+                                            document.fr2.options[o].value
+                                            document.fr2.options[o].text
+                                            document.fr2.options[o].selected =>true/false값 
+
+
+document.폼이름.목록상자이름.함수()
+                                            document.fr2.sel.focus() //셀렉트목록상자에 들어가게끔
+                                            document.fr2.sel.blur()//해제
+                                             */
+
+
+
 
 //db버튼
 
