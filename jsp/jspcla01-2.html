@@ -4,89 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="classhtmlcss.css" rel="stylesheet" type="text/css">
+    <link href="classjspcss.css" rel="stylesheet" type="text/css">
     
     <title>Document</title>
-    <script type="text/javascript">
+    <script src="jspjs.js">
 
-       /*  function sel1() {
-        alert(document.fr2.sel.name);
-        alert(document.fr2.sel.type);
-        alert(document.fr2.sel.length);
-        alert(document.fr2.sel.selectedIndex);
-        document.fr2.sel.focus()
-        document.fr2.sel.blur()
-    
-    }
-    
-        function opt1() {
-            alert(document.fr2.sel.option[0].value);
-            alert(document.fr2.sel.option[0].text);
-            alert(document.fr2.sel.option[0].selected); //선택이 되어있는지 되어있으면 true, false
-        }
-        //첫번째 목록선택이 되어있으면, 
-        function pracice() {
-            if(document.fr2.sel.option[0].selected==true) {
-                alert("목록선택하세요");
-                document.fr2.sel.focus();
-                return; 
-            }
-    
-        }
-
-        function check() {
-            if(document.fr.id.length==0==true) {
-                alert("아이디입력하세요");
-            }
-            if(document.fr.id.pass.length==0==true) {
-                alert("비밀번호입력하세요");
-            }
-
-        } */
-        function check() {
-	/* if(document.fr.id.value==""){
-		alert("아이디 입력하세요");
-		document.fr.id.focus();
-		return false;
-    } */
-    //id라는 깃발을 찾아가는 getElementByID 
-    if(document.getElementById("idd").value==""){
-		alert("아이디 입력하세요");
-		document.fr.id.focus();
-		return false;
-    }
-    //false 값을 들고 넘어감, 호출하면 기억장소 생기고 그 장소에 false 값 저장
-	if(document.fr.pass.value==""){
-		alert("비밀번호 입력하세요");
-		document.fr.pass.focus();
-		return;
-	}
-	if(document.fr.intro.value==""){
-		alert("자기소개 입력하세요");
-		document.fr.intro.focus();
-		return;
-	}
-	if(document.fr.hob[0].checked==false && document.fr.hob[1].checked==false && document.fr.hob[2].checked==false){
-		alert("취미 선택하세요");
-		document.fr.hob[0].focus();
-		return;
-	}
-	if(document.fr.gen[0].checked==false && document.fr.gen[1].checked==false){
-		alert("성별 선택하세요");
-		document.fr.gen[0].focus();
-		return;
-	}
-	if(document.fr.hak.options[0].selected==true){
-		alert("목록선택하세요");
-		document.fr.hak.focus();
-		return;
-	}
-	// a.jsp 전송
-	document.fr.submit();
-}
-
-    
-        </script>
+     </script>
 
 </head>
 <body>
@@ -127,7 +50,7 @@
 
         </nav>
         <article> <!--수업내용-->
-           <!--  <h2>[1월] 0113</h2>
+            <h2>[1월] 0113</h2>
             <h3>1. radio checked 관련기능</h3>
 
             <pre class = "si">
@@ -143,28 +66,31 @@
             <hr>
 
             <h3>2. select /text7 </h3>
- -->
+ 
               
             
-               <!--  <form action="b.jsp" method="get" name="fr2">
-                     목록을 선택하세요 : <select name="sel">
+                <form action="b.jsp" method="get" name="fr2">
+                    목록을 선택하세요 : <select name="sel">
 
-                        <option value="">목록선택하세요</option>
-                         <option value="1">1학년</option>
-                         <option value="2">2학년</option>
-                         <option value="3">3학년</option>
-                         <input type="button" value="목록상자확인" onclick="
-                         sel1()">
-                         <input type="button" value="option정보확인" onclick="
-                         opt1()">
-                          <input type="button" value="목록상자제어" onclick="
-                        practice()">
+                    <option value="">목록선택하세요</option>
+                        <option value="1">1학년</option>
+                        <option value="2">2학년</option>
+                        <option value="3">3학년</option>
+                        <input type="button" value="목록상자확인" onclick="
+                        sel1()">
+                        <input type="button" value="option정보확인" onclick="
+                        opt1()">
+                        <input type="button" value="목록상자제어" onclick="
+                    practice()">
 
 
-                     </select>
-                </form> -->
+                    </select>
+                </form> 
+                <br><br>
 
-              <!--   <h3> 3. text8</h3>
+                <hr>
+
+               <h3> 3. text8</h3>
             
                 <form action="a.jsp" method="get" name="fr">
                     아이디 : <input type="text" name="id" value="입력하세요"><br>
@@ -191,11 +117,11 @@
                
 
 
-            <input type="button" value="다음페이지" onclick="
-               jsp01_2next1()"> -->
+            <br><br>
+            <hr>
 
 
-<h3>text9- submit제어</h3>
+            <h3>text9- submit제어</h3>
 
                     <!--
                         alert는 false 값이 넘어왔는지 확인 check에 false가 있다는 것을 확인
@@ -206,31 +132,37 @@
 
                     -->
     
-    <form action="a.jsp" method="get" name="fr" onsubmit="return check()">
-    아이디 : <input type="text" name="id" id="idd"><br>
-    비밀번호 : <input type="password" name="pass"><br>
-    자기소개 : <textarea name="intro" rows="5" cols="10"></textarea><br>
-    취미선택하세요 : <input type="checkbox" name="hob" value="여행">여행
-                 <input type="checkbox" name="hob" value="게임">게임
-                 <input type="checkbox" name="hob" value="독서">독서<br>
-    성별 : <input type="radio" name="gen" value="남">남				
-          <input type="radio" name="gen" value="여">여<br>
-    학년 선택하세요 : <select name="hak">
-        <option value="">학년 선택하세요</option>
-        <option value="1">1학년</option>
-        <option value="2">2학년</option>
-        <option value="3">3학년</option>
-    </select><br>			  
+                <form action="a.jsp" method="get" name="fr" onsubmit="return check()">
+                아이디 : <input type="text" name="id" id="idd"><br>
+                비밀번호 : <input type="password" name="pass"><br>
+                자기소개 : <textarea name="intro" rows="5" cols="10"></textarea><br>
+                취미선택하세요 : <input type="checkbox" name="hob" value="여행">여행
+                            <input type="checkbox" name="hob" value="게임">게임
+                            <input type="checkbox" name="hob" value="독서">독서<br>
+                성별 : <input type="radio" name="gen" value="남">남				
+                    <input type="radio" name="gen" value="여">여<br>
+                학년 선택하세요 : <select name="hak">
+                    <option value="">학년 선택하세요</option>
+                    <option value="1">1학년</option>
+                    <option value="2">2학년</option>
+                    <option value="3">3학년</option>
+                </select><br>			  
 
-    <input type="submit" value="회원가입"><br>
+                <input type="submit" value="회원가입"><br>
 
-    서브밋일땐 온클릭안쓴다. 폼의 내용을 들고 서브밋 누르면 a.jsp 로가면 자바로 제어 check()동작
-    
-    
+                서브밋일땐 온클릭안쓴다. 폼의 내용을 들고 서브밋 누르면 a.jsp 로가면 자바로 제어 check()동작
+                
+                
 
 
-    </form>
+                </form>
 
+                <br><br>
+
+                <input type="button" value="다음페이지" onclick = "
+                onclick=jsp01_2next()">
+
+                <br><br>
 
 
         
