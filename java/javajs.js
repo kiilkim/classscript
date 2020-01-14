@@ -29,6 +29,11 @@ function java01_4next() {
     window.location='javacla01-4.html';
 
 }
+function java01_5next() {
+    prompt("조건문에 대해서 생각하세요");
+    window.location='javacla01-5.html';
+
+}
 
 
 
