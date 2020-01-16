@@ -6,14 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="classjspcss.css" rel="stylesheet" type="text/css">
     <title>Document</title>
+    <script src="jspjs.js">
+    </script> 
 
 </head>
 
 <body class ="js-jsp-body">
+   <!--  <script type="text/javascript">
+        function im1() {
+       alert("이미지다");
+   }
+    </script> -->
+
+    <!-- <script src="jspjs.js">
+   /* function im1() {
+       alert("이미지다");
+   } */
+    
+    </script>  -->
   
 
-    <script src="jspjs.js">
-    </script>
     <header>
         <h1>JSP</h1>
             <hr>
@@ -49,7 +61,7 @@
 
         </nav>
         <article> <!--수업내용-->
-            <h2>[1월]</h2>
+            <h2>[1월] 0107</h2>
             <h3>1. 객체들의 계층구조</h3>
             <pre class = "si">
     1)window -location
@@ -74,8 +86,29 @@
             <hr>
 
             <h3>2. 기능 실행하기</h3>
+
             
             <pre class = "si">
+    0) 
+     -문서 제목 : <input type="button" value="문서제목" onclick="
+        fun()">
+     -문서 배경 : <input type="button" value="배경" onclick="
+        fun2()">
+     - 변수명에 '예약어'(title, bgColor) 는 못쓴다!
+    
+     - 문서내용쓰기 : 
+     <input type="radio" name="col" value="yellow" onclick="fun3(value)">노란색
+     <input type="radio" name="col" value="red" onclick="fun3(value)">잘못된선택시 경고
+     예를들어, 선택기로에서 폭격상황이라면 소리+붉은색(경고)
+               
+    1) 이미지 제어
+
+     -<img src="1.jpg" name="img1" width="500" height="400">
+     <input type="button" value="첫번째이미지정보" onclick="im1()">
+
+    
+
+
     1) 사이트 열기 : 
         <input type="button" value="naver" onclick="
         opensite()">
