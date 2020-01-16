@@ -59,6 +59,40 @@ function address1() {
     alert("jspcla01-1.html 로 이동하겠습니다");
     location.href="jspcla01-1.html";
 }
+
+//0107버튼
+function fun() {
+    alert(document.title);
+    document.title="문서제목";
+
+}
+
+function fun2() {
+    alert(document.bgColor);
+    document.bgColor="green";
+}
+
+function fun3(c) {
+    document.bgColor=c;
+
+}
+function fun4() {
+    document.bgColor=d;
+}
+
+//0107이미지
+
+ function im1(){
+    alert(document.img1.src);//위치
+    alert(document.img1.name);//이름
+    alert(document.img1.width);//넓이
+    alert(document.img1.height);//높이
+    alert(document.img1.border);//굵기
+} 
+
+
+
+
 //새로고침 느낌
 function reload() {
     location.reload();
@@ -135,6 +169,8 @@ function dbcla01_1next() {
 }
 
 //0113
+
+function 
  /*  function sel1() {
         alert(document.fr2.sel.name);
         alert(document.fr2.sel.type);
