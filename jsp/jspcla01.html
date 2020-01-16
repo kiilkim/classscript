@@ -10,11 +10,10 @@
 </head>
 
 <body class ="js-jsp-body">
-  
-
     <script src="jspjs.js">
     </script>
-    
+  
+
     <header>
         <h1>JSP</h1>
             <hr>
@@ -50,6 +49,74 @@
 
         </nav>
         <article> <!--수업내용-->
+
+            <h2>[1월] 0102</h2>
+            <h3>1. 기본 기능</h3>
+            <pre class="si">
+    1) 클릭시 alert 메세지 출력하기 : 
+    <input type="button" value="클릭연습" onclick="
+    alert('클릭했나요?')">
+
+     -&lt;input type="button" value="클릭연습" onclick="
+     alert('클릭했나요?')"&gt; 로 쓰면 위와 같이 작동한다. 
+
+    2) 마우스 위에 옮기면 경고창:
+    <input type="button" value="마우스올려" onmouseover="
+    alert('버튼에 마우스 올렸나요?')"> 
+
+     -코딩 식 :드래그하면 답보임↓<span style="color:whitesmoke">
+        &lt;input type="button" value="마우스올려" onmouseover="
+        alert('버튼에 마우스 올렸나요?')"&gt;
+        </span>
+      
+    3) 함수이용할때 이름 정해주기 -> 호출하기 위해서 script 또는 js파일에서
+     - function fun() {
+                 ↑ 부분이 함수 이름
+     } 구조에서
+
+     - 호출하려면 
+      &lt;input type="button" value="클릭연습" onclick="fun()"&gt; 
+      과 같이                                        ↑에 불러주면 됨.
+    
+     - <input type="button" value="호출연습" onclick="fun()">
+
+
+            </pre>
+            <h3>2. 변수 저장해서 연산하기</h3>
+            <pre class="si">
+    1) 10+20 연산결과 출력 메세지
+      -기억장소 var 써서 연산하기 
+      -script or js파일에 다음과 같이 쓴다. //변수마다 var 붙여야한다.
+       
+     function calPractice() { 
+       var a = 100;
+       var b = 20;
+
+       사칙연산 메세지 출력 +, -, *(곱), /(나누기), %(몫)
+
+       alert(a+b);
+       alert(a-b);
+       alert(a*b);
+       alert(a/b);
+     }
+
+      - 입력을 제대로 하고 아래와 같이 식을 쓰면
+      &lt;input type="button" value="연산" onclick="calPractice(a,b)">
+
+      
+      -<input type="button" value="연산" onclick="calPractice()">
+      
+      왜 출력안되지? -답 : <span class="si">
+          1) 굳이 a,b를 calPractice안에 넣을 필요가 없음, 값이 정해져있기에
+          2) 
+
+
+      </span>
+
+    
+                </pre>
+
+
             <h2>[1월] 0103</h2>
             <h3>1. function의 사용 </h3>
             <pre class = "si">
@@ -58,6 +125,60 @@
     2) function 함수명() {
 
     } 의 형태로 쓰이고 {}안에 명령어들을 넣는다.
+
+    3) 함수 이름 호출한 곳으로 되돌리기 : reture
+     - '되돌아간다'에 대한 개념이 헷갈릴 수 있음
+     - ex1) 다음과 같이 식을 script or js 파일에 써보자
+
+     function fun1() {
+        alert("함수1메시지 출력");
+        return;
+    }
+     -다음과 같다 : <input type="button" value="함수1호출" onclick="re()">
+     -이미지로 보는 개념 (나중에 추가)
+      <img src="">
+
+     - ex2) 더 나아가서 다음과 같이 써보자
+     
+     function fun2(m) {
+        alert(m);
+        alert("함수2메시지 출력");
+        return;
+    }
+     -다음과 같다 : <input type="button" value="함수2호출" onclick="re1(500)">
+
+     - ex3) 다음과 같이 써보자
+
+     function fun2_1(a,b) {
+        //두수 사칙연산
+        alert(a+b);
+        alert(a-b);
+        return;
+        alert(a*b);
+        alert(a/b);
+        return;
+    }
+      결과를 미리 예측해봐라! 
+      
+     - 다음과 같다 : <input type="button" value="함수3호출" onclick="re2(100,200)">
+      returnl 아래의 것은 나오지 않는다. 
+
+     - ex4) 다음과 같이 써보자
+
+     function fun3(x) {
+        alert("받은동전 : "+x)
+        //결과값 하나만 리턴
+        return "음료수";
+    }
+     - 그리고 이번엔 input에 들어가는게 다음과 같다. 
+
+      &lt;input type="button" value="함수3호출" onclick="alert(fun3(500))"&gt;
+
+      <input type="button" value="함수4호출" onclick="alert(re3(500))">
+    
+     - ex4 그림으로 이해하기 
+
+     
 
     3) 두수의 연산 구하기 
 

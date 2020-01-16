@@ -1,7 +1,7 @@
 
 
 //jsp 버튼
-function jsp12next() {
+function jsp12_next() {
     a = prompt("jsp의 역할은?");
     location.href="jspcla01.html";
 
@@ -20,9 +20,55 @@ function jsp01_1next() {
     location.href="jspcla01-3.html";
 
 }
-//jsp 다음페이지 버튼
+//0102 기능
+        alert("문서내 자바스트립트");
+        alert("1월 부터 jsp 빡시게!");
+
+function fun() {
+    alert("호출하는법 이해했나요?");
+}
+
+function calPractice() {
+    var a =100;
+     b =20;
+
+    alert(a+b);
+    alert(a-b);
+    alert(a*b);
+    alert(a/b);
+
+}
+
+//0103기능
+function re() {
+    alert("함수1메세지 출력");
+    return;
+}
+
+function re1(m) {
+    alert(m);
+    alert("함수2메세지 출력");
+    return;
+}
+
+function re2(a,b) {
+    alert(a+b);
+    alert(a-b);
+    return;
+    alert(a*b);
+    alert(a/b);
+    return;
+}
+
+function re3(a) {
+    alert("받은동전: " +a);
+    return "음료수";
+}
+
 
 function cal(a,b) {
+
+
     alert(a+b);
     alert(a-b);
     alert(a*b);
@@ -42,7 +88,7 @@ function energy(x) {
     }
 }
 
-//0103기능
+
 function opensite() {
     window.open("http://www.naver.com")
 }
