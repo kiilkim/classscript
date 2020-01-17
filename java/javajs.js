@@ -53,3 +53,7 @@ function fun01_1(a,b) {
     alert(a+b);
 }
 
+function bgBlack (){
+    document.querySelectorAll('body').style.backgroundColor="black";
+
+}
