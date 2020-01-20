@@ -15,9 +15,29 @@ function jsp01_1next() {
     a = prompt("그닥 물어볼게없음..");
     location.href="jspcla01-2.html";
 
-}function jsp01_2next() {
+}
+function jsp01_2next() {
     a = prompt("뭔가 선택할 경우 쓰는 태그는?");
     location.href="jspcla01-3.html";
+
+}
+
+
+function jsp01_3next() {
+    a = prompt("뭔가 선택할 경우 쓰는 태그는?");
+    location.href="jspcla01-4.html";
+
+}
+
+function jsp01_4next() {
+    a = prompt("뭔가 선택할 경우 쓰는 태그는?");
+    location.href="jspcla01-5.html";
+
+}
+
+function jsp01_5next() {
+    a = prompt("뭔가 선택할 경우 쓰는 태그는?");
+    location.href="jspcla01-6.html";
 
 }
 //0102 기능

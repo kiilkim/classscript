@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="classjspcss.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+
+</head>
+
+<body class ="js-jsp-body">
+
+
+   
+  
+
+    <script src="jspjs.js">
+    </script>
+    <header>
+        <h1>JSP</h1>
+            <hr>
+            <h3>웹의 여러가지 기능을 제어하는 것.</h3>
+            <hr>
+    </header>
+
+    <section>
+
+        <nav> <!--월별-->
+            <ul>
+                <li><a href ="jspcla12.html">12월</a></li>
+                <hr>
+                <li><a href ="jspcla01.html">1월</a></li>
+
+                <hr>
+                <li><a href ="jspcla02.html"></a>2월</li>
+                
+                <hr>
+                <li><a href ="jspcla03.html"></a>3월</li>
+                
+                <hr>
+                <li><a href ="jspcla04.html"></a>4월</li>
+                
+                <hr>
+                <li><a href ="jspcla05.html"></a>5월</li>
+                
+                <hr>
+                <li><a href ="jspcla06.html"></a>6월</li>
+                
+                <hr>
+            </ul>
+
+        </nav>
+        <article> <!--수업내용-->
+            <h2>[1월] 01/20 jsp1</h2>
+            
+            <h3>1. for 함수 사용한 table 만들기</h3>
+            <pre class="si">
+         1) for 안에 변수 선언하고, 
+            println으로 테이블 만들기 
+
+        
+
+
+            
+            </pre>
+
+            <hr>
+            <h3>2. application,jsp </h3>
+       
+            <pre class="si">
+    1) application 내장객체 : 웹 애플리케이션 정보를 저장, 내장객체
+    웹 서버가 start 생성->웹서버가 stop 사라짐
+
+    2) application. 변수, application.함수()
+
+    3) 
+               
+
+
+            </pre>
+            <hr>
+
+            <h3>3. request</h3>
+       
+            <pre class="si">
+    1) request 내장객체 : 사용자가 요청한 정보 http로 들고와서 서버기억 저장소 requset에 저장
+
+    2) requset.변수 , requset.함수(), requset.getParameter(파라미터이름)
+
+    3) requset ->http가진 모든 정보(헤더) 저장, 클라이언트 정보, 서버 정보, 세션 ,쿠키정보
+   
+            </pre>
+
+            
+            <h3>4. 여러가지 명령어</h3>
+     
+       
+            <pre class="si">
+    서버 이름 : &lt;%=request.getServerName() %>&lt;br>
+    서버 포트번호 : &lt;%=request.getServerPort() %>&lt;br>
+    URL 주소 : &lt;%=request.getRequestURL() %>&lt;br>
+    URI 주소 : &lt;%=request.getRequestURI() %>&lt;br>
+    사용자 IP 주소 : &lt;%=request.getRemoteAddr() %>&lt;br>
+    프로토콜 : &lt;%=request.getProtocol() %>&lt;br>
+    요청방식 : &lt;%=request.getMethod() %>&lt;br>
+    컨텍스트(프로젝트) 경로 : &lt;%=request.getContextPath() %>&lt;br>
+    물리적인 경로 : &lt;%=request.getRealPath("/") %>&lt;br>
+    
+    http헤더정보 : &lt;%=request.getHeader("host") %>&lt;br>
+    http헤더정보 : &lt;%=request.getHeader("accept-language") %>&lt;br>
+    http헤더정보 : &lt;%=request.getHeader("accept") %>&lt;br>
+    http헤더정보 : &lt;%=request.getHeader("user-agent") %>&lt;br>
+    http헤더정보 : &lt;%=request.getHeader("connection") %>&lt;br>
+  
+            </pre>
+            <hr>
+            
+            <h3>5. response</h3>
+       
+            <pre class="si">
+    1) 사용자 요청이 들어오면 requset, response 자동 생성
+
+    2) reponse : 처리한 결과 응답정보 저장 ->http 보냄 ->사용자 보여짐
+
+    3) requset, response 기억장소 사라짐
+
+    4) response.변수, response.함수()
+
+    5) 여러가지 response
+
+    response.setHeader("accept-language","en") header값 설정,언어설정 변경
+    response.setContentType("text/html; charset=UTF-8") 타입을 변경
+    response.addCookie(쿠키값)   서버에서 만든 쿠키값을 사용자에게 저장
+    response.sendRedirect(주소)   다른 주소를 이동(요청)
+            </pre>
+
+            <hr>
+            
+            <h3>6. session</h3>
+
+
+       
+            <pre class="si">
+   1) 관련 명령어
+
+    세션ID : &lt;%=session.getId() %>&lt;br>
+    세션값 만들어진 시간 : &lt;%=session.getCreationTime() %>&lt;br>
+    세션값 최근 사용 시간 : &lt;%=session.getLastAccessedTime()%>&lt;br>
+    세션값 유지 시간 : &lt;%=session.getMaxInactiveInterval() %>초&lt;br>
+    세션값 유지 시간 변경 &lt;%  session.setMaxInactiveInterval(3600);    %>&lt;br>
+    세션값 변경 유지 시간 : &lt;%=session.getMaxInactiveInterval() %>초&lt;br>
+    세션값 초기화(전체삭제) 로그아웃&lt;%
+                            session.invalidate();
+            </pre>
+            <input type="button" value="다음페이지" onclick="
+               jsp01_next()">
+
+        
+
+
+        </article> <!--끝엔 한주 수업단위별-->
+
+
+    </section>
+
+    
+    
+</body>
+</html>
