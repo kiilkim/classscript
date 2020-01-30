@@ -59,7 +59,7 @@
         
         -->
             <h2>[1월] 0128</h2>
-            <h3></h3>
+            <h3>1. session.</h3>
             <pre class="si">
                
 
@@ -67,9 +67,42 @@
             
             </pre>
 
-            <h3></h3>
-            
+            <h3>2. cookie.</h3>
+
+
             <pre class="si">
+            
+1) 페이지에 상관없이 값 저장, 유지, 클라이언트 저장(큰차이),보안관계 없을때
+서버에 부하를 줄일때
+
+2) 변수선언 
+
+3) 클라이언트에서 http가 쿠키값 가져와서 request에 저장
+Cookie(참조값) cookies[](변수) = request.getCookies();(쿠카값 배열로가져오기)
+
+4) 배열내용 출력 for문과 if문이용
+배열의 크기는 쿠키가 set되어진 곳에 있는 
+Cookie cookies = new Cookie("cook","Cookie Value"); 에서 확인, 크기는 0,1(length=2)
+
+
+for(int i=0; i<cookies.length; i++) { 변수 i를 0 부터 쿠키배열의 크기보다 작을
+    때까지 돌릴건데
+    
+    if(cookies[i].getName().equals("cook")){ 만약 그 배열안의 i번쨰(0,1)의 이름이
+        cook과 같으냐?
+
+        같으면
+
+        선언된 변수
+        cookname=cookies[i].getName(); 쿠키 배열 첫번째 값 
+        cookvalue=cookies[i].getValue();  두번재값 
+         
+
+    }
+
+}
+
+               
                
 
 

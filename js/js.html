@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>navigator</h2>
+    <nav id="upNav">
+        <ul>
+            <li><a href="#class1">1~3강</a></li>
+            <li><a href="#class2">4~6강</a></li>
+            <li><a href="#class3">7~9강</a></li>
+            <li><a href="#class4">12강</a></li>
+            <li><a href="#class5">13강</a></li>
+            <li><a href="#class6">14강</a></li>
+            <li><a href="#class7">15강</a></li>
+            <li><a href="#class8">16강</a></li>
+
+
+        </ul>
+    </nav>
+    <h2 id="class1">1. 1강~3강 html과 javascript 만남</h2>
+
+    <script>
+       // document.write(1+1); 1+1 =2 라고 계산되어주는 걸 보여주는예제
+
+    </script>
+
+    <pre style="font-size: x-large;">
+  
+        1) javascript 시작 선언
+
+        &lt;script&gt;로 열고 &lt;/script&gt;로 닫는다. 
+
+        2) html 과 javascript 차이가 뭐냐?
+        - javascript에서는 1+1을 계산해준다. 
+        - html 은 1+1이라 쓰면 1+1그대로 노출.
+
+        3) button을 만들자 
+        - input tag 사용하고 type 을 button 글씨는 value
+        <input type="button" value="hi" onclick="alert('hi눌렀니?')">
+
+        - 경고창은 alert다. (검색해볼까요?)
+
+        -<span style="font-weight: bold"> onclick 속성?</span> 반드시 js가 와야합니다.
+        - 클릭했을 때, 자바스크립트를 실행하라. 기억하고 있다가 ,클릭시 실행해야지.
+        - event: web browser위에서 일어날 수 있는 것.
+          그 중 기억할만한 이벤트 
+        - type 을 text 도 있다. 그리고 onchange 속성은?
+          안이 변화하면 change 되었다고 말해주고 , 만약 지우고 빠져나오면 실행x
+        - <input type="text" onchange="alert('changed')">
+        - 검색이 중요하다.!! 
+
+        -키를 눌렀을 때 event를 발생시키고 싶다.
+        -onkeydown : 뭔가 키보드의 key를 눌렀을 때, 
+        - <input type="text" onkeydown="alert('key down!')">
+
+        4) js를 실행하기 위한 또다른 방법 console 
+
+        - 꼭 파일이 아니라도 어떤 코드를 실행해볼 수도 있다.
+        - 웹페이지에서 어떠한 걸 해볼 때. 
+        - console에서 실행되는 것은 해당 화면의 html상에서 적용된다. 
+        - 코딩을해서 얻는 효용은 현실에 해당하는 것을 해결할수있는것.
+        - <span style="font-weight: bold">analogue인 현실을 가볍게 해결하는 방향</span>
+
+
+    </pre>
+    <hr>
+
+    <h2 id="class2">2. 4~6강 데이터 타입, 변수와대입 연산자, 제어</h2>
+
+    <pre style="font-size: x-large;">
+    
+        1) data type 이 6개가 있다. 
+        - 문자열 String 과 숫자 Number 이 있다. 일단 무엇인지 성격이 무엇인지
+        - console 에서 한번 확인해 보자. 
+        - alert 할 때 마다 하기 귀찮다. 그래서 그냥 1+1이라고 적자.
+        - 중요한건 연산이다 +란 것? 왼쪽과 오른쪽 더해서 하나의 합을 만든다 '이항연산자'
+        - 산술연산자에는 사칙연산자가(+,-,*,/)가 있다. /가 나누기다.
+
+        2) Number
+
+
+        3) 문자열
+        - " " 큰따옴표는 큰따옴표로 끝내고 
+        - ' ' 작은따옴표는 작은따옴표로 끝낸다.
+        - 유용한 기능 : 매우 많아서 검색을 통해서 알아봐라.
+         "문자열".length : 글자수 알려준다. 
+         "문자열".toUpperCase() : 소문자를 대문자로 만든다.
+         "문자열".indexOf(찾고자하는 값) : 몇 번째에 있는지.
+         "문자열".trim : 문자 정리 
+
+         아직 우린 많은 것을 알지 못하나, 익숙해지고, 경험적으로 알고나서
+         압축하는 기회가 있을 것입니다.
+
+         문자열이냐 숫자열이냐에 따라서 많이 달라지기에 조심!
+
+         4) 변수와 대입연산자
+         - console 창에서 x=1, y=1 쳐보자. 
+         - = 대입연산자 : 오른쪽의 값을 왼쪽에 넣는다.
+         - 1=2? 결과가? 당연히 안된다. error 메세지 확인   
+         - x는 값이 바뀔 수 있다. 
+         - 1과 같은 것은 항상 같다고해서 '상수'라고 한다.
+
+         - 변수를 왜 쓰는가? 이유가 많다. 공식을 사용하기 위해서 
+         - 글에 어떠한 이름이 있다고 해보자. 그리고 그 글에 특정 단어를
+         바꿔야하는데 1억개라면?? 
+         - 변수를 쓸 때 가급적 var 을 써라 좋은 습관. 
+
+         <!-- 4) 목표예제 
+         <input type="button" value="예제1" onclick="
+         location.href='ex1.html'">
+ -->
+         5) 웹브라우저 제어 
+         - js를 통해서 할 수 있는 일 중에 하나. 
+         - night 클릭시 검은색으로 바꾸고 싶단 말이에요? 
+         - night 클릭시 body 태그의 style 속성이 바뀔 수 있다면? 
+         html 경우에는 코드 수정을 해야해서, 힘들고, 한번 화면에 표시하면 
+         바꿀 수 있는 능력이 없다. 그러나 js는 다르다. 클릭시 어떻게 되는지 보자!
+         <input type="button" value="night" onclick="
+            document.querySelector('body').style.backgroundColor='black';
+            documnet.querySelector('body').style.color='white';
+         ">
+    </pre>
+
+    <hr>
+
+    <h2 id="class3">3. 7~9강 CSS의 본질</h2>
+
+    <pre style="font-size: x-large;">
+        1) style 태그, 속성, 
+
+        2) id선택자 ,class 선택자, css선택자
+
+    </pre>
+    <hr>
+
+    <h2 id="class4">4. 12강 '제어할 태그 선택하기' </h2>
+
+    <pre style="font-size: x-large;">
+        1) night 와 day 버튼
+
+        - 상호적으로 웹변경 하고 싶다. 
+        - body tag를 선택하게 한다 -> querySelector('tag name')
+        - query : web에 질문한다
+        - css에선 background-color 인데 js에서 backgroundColor 다 규칙
+        <input type="button" value="night" onclick="
+            document.querySelector('body').style.backgroundColor='black';
+            document.querySelector('body').style.color='white';    
+        ">
+
+        <input type="button" value="day" onclick="
+            document.querySelector('body').style.backgroundColor='white';
+            document.querySelector('body').style.color='black';    
+        ">
+
+
+    </pre>
+    <hr>
+
+    <h2 id="class5">5. 되돌아 보기</h2>
+
+    <pre style="font-size: x-large;">
+         1) 시간의 순서 = program 
+         2) 순서를 만드는 행위 = programing
+         3) 순서를 만든느 사람 = programer 
+         
+         그래서 '순서'를 만드는 것. 규칙을 만드는 것.
+         규칙이 왜 필요한가? 효율성을 위해 필요하다. 
+
+         '시간'이 부족하다고 느끼는 현대인에게, 그리고 100년의
+         한정된 시간을 살아가는 인간에게 '시간효율'은 최고의 선택지
+         일 것이다. 
+
+         '반복'이 효율을 지탱해줬지만, 지금은 그 '반복'을 통해서
+         지겨움에서 벗어나고 싶은 사람이 많을 것이다. 
+
+         앞으로, 이 공부를 하는 것은, 규칙, 순서 등으로 세상을 조금더
+         효율적으로 만들기 위함에 있다. 즉, 가치가 있다. 
+
+         닷컴 버블 20년 , 우리가 생각해야할 것은, 실리콘밸리에서는 이미
+         인간의 '효율한계체감효용'의 수준은 더이상 올릴 수 없다(올려도약간)
+         는 것을 알게되었을 것이다. 수많은 언어가 있고, 앞으로 나오는 언어는
+         지금보다 더 효율을 내려면 더 많은 투자를 해야할 것이다.
+
+         지금 나와있는 것으로도 충분히 인간이 효율을 느낄 수 있도록 할
+         수 있다. 그런 툴이 이미 나와있다. 
+
+    
+    </pre>
+    <hr>
+
+    <h2 id="class6">6. 14강 조건문 예고</h2>
+
+    <pre style="font-size: x-large;">
+        1) 조건문은 한방향이 아니라 두방향으로 갈 수도 있다.
+        2) 위의 버튼을 봣을때, 하나의 버튼으로 합쳐지면 어떨까?
+        3) 인간은 불편을 개선하면서 발전해왔다.
+        4) '토글'  if ~else 
+    
+    </pre>
+
+    <hr>
+       
+    <h2 id="class7">7. 15강 비교연산자와 불리언</h2>
+
+    <pre style="font-size: x-large;">
+        1) document.write(1 === 1); 의 의미는 무엇일까요?  1 = 1 ?
+        <script>
+        document.write(1 === 1);
+        </script>
+
+        2) 1 = 2 ? 
+        <script>
+         document.write(1 === 2);
+         </script>
+    
+        3) boolean 은 2가지 true false이다. 
+        - 인간은 단순 반복에서 해방. 
+        - 근데 여전히 단순반복을 하게 하는 작업을 한다면? 뒤쳐질 것이다. 
+
+        4) html 내에서 
+    </pre>
+    
+
+    
+    <h2 id="class8">8. 16강~17강 조건문/활용</h2>
+    <script>
+        document.write("1<br>");
+        document.write("2<br>");
+        document.write("3<br>");
+        document.write("4<br>");
+    </script>
+
+    <pre style="font-size: x-large;">
+        위의 결과는 script 안에 다음과 같이 넣었을 때 나타난다.
+
+              document.write("1");
+              document.write("2");
+              document.write("3");
+              document.write("4"); 
+         
+              
+            1) if문을 한번 써보자 중간에 3이 생략된 이유는 
+            else 안에 넣었기 때문이다. if() 안에는 true, false의
+            boolean 값이 올 수 있는데, true면 바로 뒷 {} 안의 내용이
+            출력되고 false 이면 else { } 안의 문장이 출력 된다.
+
+            조건에 따라 실행되는건 아니라서 쓸모는 없다. 개념잡기 ! 
+    </pre>
+
+    <script>
+        document.write("1<br>");
+        if(true) {
+       
+        document.write("2<br>");
+
+        } else {
+        document.write("3<br>");
+
+        }
+        document.write("4<br>");
+    </script>
+
+    <pre style="font-size: x-large;">
+              2) night, day 를 하나로 퉁쳐보자.
+            
+             - 이 버튼의 밸류 값이 나이트 라면? ~코드들이 실행되어라
+             - 현재 이 버튼의 벨류값이 무엇인가? 그리고 id를 부여해놔라
+            <input type="button" value="night" onclick="
+            var target= document.querySelector('body');
+
+            if(this.value === 'night') {
+              target.style.backgroundColor='black';
+              target.style.color='white';
+              this.value='day';   
+
+              var links = document.querySelectorAll('a');
+              var i = 0;
+              while(i<links.length){
+                  links[i].style.color='powderblue';
+                  i+=1;
+              } 
+            }
+            else {
+                target.style.backgroundColor='white';
+                target.style.color='black'; 
+                this.value='night';   
+
+                var links = document.querySelectorAll('a');
+                var i = 0;
+                while(i<links.length){
+                    links[i].style.color='blue';
+                    i+=1;
+                }
+            }
+
+            ">
+
+    </pre>
+
+
+    <h2 id="class9">9. 18강 리팩토링</h2>
+
+    <pre style="font-size: x-large;">
+            1) 공장에 다시 보내 개선한다의 의미. 코드는 코딩할 때, 코드가 
+            비효율적일 수 있다. 유지보수 편리하게, 종속성과, 중복성의 배제 위함.
+            sw가 커지고 복잡해질 수록 리팩토링이 필수!
+
+            2) 밑에서 보고 싶다고? 복사붙여넣기 하자 ~ 그러나 위에것이 바뀐다. 
+            이때 id를 바꿔준다. 만약 1억개를 바꿔야한다면,,??
+
+            3) onclick 안의 코드를 가르키는 특수코드, this 다. 자기 자신을
+            가르키는 부분인 것을 this라 하면, 앞의 id는 굳이 없어도 됨.
+
+            4)document.querySelector('body') 가 반복된다. 중복을 제거하라! 
+            코딩이 여러가지 기술 출현하게 된 이유가 중복제거다. 
+            그래서 onclick=" 사이에는 js가 들어가기 때문에 변수선언이 가능하다."
+            그래서 반복적은 document.querySelector('body') 를 target 으로 선언하고
+            그것을 대체하면 된다.
+    
+    </pre>
+    
+    <h2 id="class10">10. 19강~20강 반복문 예고/반복문</h2>
+
+    <pre style="font-size: x-large;">
+            1) 또 불만족? 링크가 어둡게 보인다.. black 일때는 밝게, 밝을땐
+            어두울 때,, ! 
+
+            2) 배열 ? 처음 봤을 땐, 조금 힘들 수도 있다. 왜 필요한가?
+
+            3) 집에있는 사물이 많아진다 -> 정리할 필요성, 수납공간, 코딩도마찬가지
+
+            4) 데이터마다 타입이 달라서 어려워진다 내용이 많아지면,
+            사람이 감당할 수 없는 sw는 좋은 sw가 아니다. 
+
+            5) 배열?
+            - [] 로 시작하는데 안에 "","","" 로 쓸 수있다.
+            - 수납상자를 만든것이랑 똑같다. 
+            - 꺼내야 지? 만들었으면 
+            - 들어있는 값이 몇개인가?  
+            <script>
+               var coworkers =  ["김기일", "김태영","김문수"] ;       
+            </script>
+            - 첫번째 데이터를 꺼내오고 싶다.?
+            document.write(coworkers[0]); 과 같이 쓴다. []안은 index 라 하는데
+            여기서 숫자 0은 (컴퓨터는 첫번째를 0부터 시작) index 1번이란 것이다.
+            <br>
+
+            <script>
+                document.write(coworkers[0]); 
+                document.write("첫번째 사람");
+            
+                document.write(coworkers[1]);
+                document.write("두번째 사람");
+
+            </script>
+             -데이터 추가하고싶다?
+
+             <script>
+              coworkers.push('김다람');
+              coworkers.push('김태호');
+
+             </script>
+
+             -count
+
+            <script>
+             document.write(coworkers.length);
+            </script>
+
+             - 배열에 여러가지 명령어가 있다. 데이터를 삽입,삭제, 순서등 
+             검색으로 찾아내면 된다. javascript array라 치면 많다. 
+
+            
+    </pre>
+    
+    <h2 id="class11">10. 21강 반복문(loop)</h2>
+
+    <pre style="font-size: x-large;">
+        <ul>
+        <script>
+
+            var i=0;
+            while(i<5) {
+            document.write('<li>'+i+'</li>');
+            i++;
+            }
+
+        </script>
+        </ul>
+            1) script 를 일단 쓰자. 위의 예제가 된다. 
+            
+            2) ul로 감싸고, 만들어보자, 근데 2,3이 더많이 써야하는 경우는?
+            만약 1억개라면? 내용의 수정사항, 버그가 있다면? 
+
+            3) 반복을 해야한다면, 반복문 배우는것은 어렵지 않다.
+
+            4) 절망을 경험하지 못한 이들은 잘모를것이다.. 
+
+            
+    </pre>
+
+    
+    <h2 id="class11">11. 22강 배열과 반복문/활용.</h2>
+
+    <pre style="font-size: x-large;">
+            1) 나의 아이템들
+            <ul>
+                <li>bread</li>
+                <li>cloth</li>
+                <li>gun</li>
+                <li>weap</li>
+            </ul>
+
+            2) 만약 아이템이 추가되고, 그게 수가 수십개라면?
+
+            <script>
+                
+                var items = ["bread","cloth","gun","weap","clap"];
+                var i = 0;
+                
+                
+                while(i<items.length) {
+                    document.write('<li>'+items[i]+'</li>');
+                    i++;
+
+                }
+
+
+            </script>
+
+            3) 활용 - night_day 키를 바꾸기. 
+
+            - querySelector라는 것은 '하나'만 가져온다.
+            - querySelectorAll 을해야 '모두' 가져온다.
+    </pre>
+
+    <h2 id="class"></h2>
+
+    <pre style="font-size: x-large;">
+    
+    
+    </pre>
+    <h2 id="class"></h2>
+
+    <pre style="font-size: x-large;">
+    
+    
+    </pre>
+    <h2 id="class"></h2>
+
+    <pre style="font-size: x-large;">
+    
+    
+    </pre>
+
+
+    <br><br>
+    <a href="#upNav"><input type="button" value="맨위로" ></a>
+         
+    
+</body>
+</html>
+
+
