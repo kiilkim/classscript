@@ -85,11 +85,11 @@ Cookie(참조값) cookies[](변수) = request.getCookies();(쿠카값 배열로�
 Cookie cookies = new Cookie("cook","Cookie Value"); 에서 확인, 크기는 0,1(length=2)
 
 
-for(int i=0; i<cookies.length; i++) { 변수 i를 0 부터 쿠키배열의 크기보다 작을
-    때까지 돌릴건데
+ for(int i=0; i &lt;cookies.length; i++) { 
+     변수 i를 0 부터 쿠키배열의 크기보다 작을 때까지 돌릴건데
     
-    if(cookies[i].getName().equals("cook")){ 만약 그 배열안의 i번쨰(0,1)의 이름이
-        cook과 같으냐?
+    if(cookies[i].getName().equals("cook")){ 
+        만약 그 배열안의 i번쨰(0,1)의 이름이 cook과 같으냐?
 
         같으면
 
