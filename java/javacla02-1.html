@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="classjavacss.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+
+</head>
+
+<body class ="js-java-body">
+  
+
+    <script src="javajs.js">
+    </script>
+    <header>
+        <h1>JAVA</h1>
+            <hr>
+            <h3>웹의 여러가지 기능을 제어하는 것. 응용.</h3>
+            <hr>
+    </header>
+
+    <section>
+
+        <nav> <!--월별-->
+            <ul>
+                <li><a href ="javacla12.html">12월</a></li>
+                <hr>
+                <li><a href ="javacla01.html">1월</li>
+
+                <hr>
+                <li><a href ="javacla02.html"></a>2월</li>
+                
+                <hr>
+                <li><a href ="javacla03.html"></a>3월</li>
+                
+                <hr>
+                <li><a href ="javacla04.html"></a>4월</li>
+                
+                <hr>
+                <li><a href ="javacla05.html"></a>5월</li>
+                
+                <hr>
+                <li><a href ="javacla06.html"></a>6월</li>
+                
+                <hr>
+            </ul>
+
+        </nav>
+        <article> <!--수업내용-->
+            <h2>[2월]0203</h2>
+            <h3>1. </h3>
+            <pre class="si">
+     --- 멤버변수 = 인스턴스변수 ---
+     => 클래스 내부, 메서드 외부에 선언한 변수
+     이름(name) - 문자열
+     나이(age) - 정수
+     배고픔(isHungry) - 논리
+     
+     --- 메서드 ---
+     먹는다(eat()) : 파라미터 X, 리턴값 X
+     일한다(work()) : 파라미터 X, 리턴값 X
+
+    //멤버변수(인스턴스변수) 선언          
+	String name;
+	int age;
+	boolean isHungry;
+	
+	
+	// 메서드 정의
+	// 1. eat() : 파라미터 X, 리턴값 X, "밥을 먹는다!" 출력, isHungry 변수 false 로 변경
+	답: <span style="color:whitesmoke"> void eat() {
+		System.out.println("밥을 먹는다!");
+		// 인스턴스변수 inHungry 의 값을 false 로 변경
+        isHungry = false;
+    }
+	</span>
+	
+	// 2. work() : 파라미터 X, 리턴값 X, "일 한다!" 출력, isHungry 변수 true 로 변경
+	답: <span style="color:whitesmoke">public void work() {
+		System.out.println("일 한다!");
+		isHungry = true;
+    }
+</span>
+
+            
+            </pre>
+            <h3>2. person</h3>
+         
+            <pre class="si">
+    Person 클래스의 객체(인스턴스 생성) = 인스턴스화
+     - new 키워드를 사용하여 생성할 인스턴스의 클래스명을 명시
+     - Heap 공간에 생성된 인스턴스 주소를 저장할 참조변수를 선언하고
+       해당 인스턴스 생성 후의 주소값을 저장
+     - 인스턴스 생성 후에는 참조변수를 통해 인스턴스 접근 가능
+      -> 변수명.멤버변수명 또는 변수명.매서드명()의 형태로 접근 
+     &lt; 기본 문법 >
+     클래스명 변수명 = new 클래스명();               
+     
+    person() 매서드라고 한다.
+    
+    생성자라는 개념이 있다. 
+            </pre>
+            <input type="button" value="다음페이지" onclick="
+               java01_next()">
+
+        
+
+
+        </article> <!--끝엔 한주 수업단위별-->
+
+
+    </section>
+
+    
+    
+</body>
+</html>

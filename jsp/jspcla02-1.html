@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="classjspcss.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+
+</head>
+
+<body class ="js-jsp-body">
+
+    <script src="jspjs.js">
+    </script>
+
+    <header>
+        <h1>JSP</h1>
+            <hr>
+            <h3>웹의 여러가지 기능을 제어하는 것.</h3>
+            <hr>
+    </header>
+
+    <section>
+
+        <nav> <!--월별-->
+            <ul>
+                <li><a href ="jspcla12.html">12월</a></li>
+                <hr>
+                <li><a href ="jspcla01.html">1월</a></li>
+
+                <hr>
+                <li><a href ="jspcla02.html"></a>2월</li>
+                
+                <hr>
+                <li><a href ="jspcla03.html"></a>3월</li>
+                
+                <hr>
+                <li><a href ="jspcla04.html"></a>4월</li>
+                
+                <hr>
+                <li><a href ="jspcla05.html"></a>5월</li>
+                
+                <hr>
+                <li><a href ="jspcla06.html"></a>6월</li>
+                
+                <hr>
+            </ul>
+
+        </nav>
+        <article> <!--수업내용-->
+            <h2>[2월] 0203</h2>
+            <h3>1. DB 연동</h3>
+            <pre class="si">
+    1)MVC, 스프링프레임워크
+    
+    2)쇼핑몰 프로젝트 // 독서의견 공유 몰, 
+     - 전체 프로젝트 데이터 저장할 공간 -> 데이터베이스 만들기
+     - 데이터베이스 접근은 아무나 못한다. -> 사용자 만들고 역할부여
+     - 주제별로 저장할 공간 만들기 -> 테이블 만들기(CRUD) 게시판, 회원, 상품
+     
+     실행 cmd -> 윈도우상태
+     접속 mysql -u(user) root -p 패스:1234
+     mysql>_ 이런모양 ,window에서 DB에 들어간 상태.
+     
+     데이터베이스 목록 확인 show databases 모든 권한을 다가지고있음.
+     performance_schema,sys 는 시스템괄련
+     sakila는 우리가 사용할 공간
+
+     데이터베이스 만들기 create database jspdb1(db명)
+
+     sql언어 
+     정의어- 공간만들기
+           - create, alter, drop  
+     조작어- 인터페이스, 공간안에 내용을 저장하고 ,수정, 삭제,조회등 가장! 
+           - insert update delete select ,,
+     제어어- 보안, 무결정, 권한부여 -> 일을 할 수 있도록 
+           - grant 부여 revoke 해제 
+
+    데이터베이스를 만든다 = 공간을 만든다.
+
+    주제별로 테이블을 만든다
+
+    들어가본다. 
+
+    테이블 목록 확인 show tables;
+    
+    테이블 만들기 create table;
+     - 학생테이블 만들때, 뭐 주소, 전화번호, 이름, 점수 등등
+     - 숫자는 num int, 문자는 java서는 string쓰는데 db에선 var, varchar쓴다
+
+    DB 설계가 중요하다.
+     - 근데 그 설계하는 사람은 소수고, 일단 단순 sql 한다고 되지는 않는다.
+     - 우린 db관리자 정도의 수준만 된다 이 과정 수료는
+
+    table 구조 확인 
+     - desc(describe) 'table명'
+    
+    table 내용 확인
+     - select *(모든 컬럼, 로우)
+     - from student(table 네임);
+    
+    테이블 안에 데이터 저장하기(입력하기), 어떤 DB를 하든 상관없음.
+     - insert into 테이블이름(열이름1, 열이름2)
+     - values(값1,'문자열,값2'); 
+    
+    DB에는 똑같은 2개 들어가면 안됨, 그래서 설계할 때, 이름 똑같은거 못들어가도록 막아야함조건
+     - 기준이어야 한다. 이름은 같을 수 있으나, 번호는 달라야한다.
+     - 기준키 , 한글설정. DB도 지우고, 테이블도 지우고 다시
+    
+    라틴을 한국어로 바꿔야한다. 
+
+    program data -> mysql 5.7 -> my. ini 복사 바탕화면 수정해서 덮어쓰기
+    에이터 노트패드로 수정, 잘못하면 서버 다시 설치해야함. 
+     - 96라인 '-' 빼고 utf8 저장
+     - 돌고래버튼 ,mysql 리스타트.
+      
+    테이블삭제 
+     - drop tables student;  
+
+    데이터베이스 삭제 
+     - drop database jspdb1;
+
+    DB는 정확한 데이터가 들어가도록 만들어야 함. 
+
+    duplicate entry - 똑같은 데이터 
+
+    select
+    from
+    where 조건절
+
+    데이터 수정
+    update 테이블이름 set 수정할열이름=값, 수정할 열이름='값'
+    where 조건열 =값;
+
+    데이터 삭제
+    delete from 테이블 이름
+    where 조건열 = 값;
+
+
+    JSP -> DB 연동 
+
+    1.JDBC 설치한 프로그램 안에 있는 드라이버 불러오기
+
+    2. 불러온 드라이버를 이용해서 DB주소, 아이디, 비밀번호 등 get하기
+      데이터 베이스 접속->접속정보를 저장
+
+    3. 연결정보를 이용해서 sql 구문을 만들고 실행할 수 있는 객체 생성
+
+    4. 객체 실행 (sql 구문이 실행) - insert, update, delete 
+       객체 실행 -> 결과 저장 - select
+
+    5. 결과를 처리하는 작업(출력, 배열저장) - select 
+
+    
+    <!--
+        설계된 데이터 베이스와 jsp 연동하게 되면, jsp에서 누군가
+        자신의 정보를 입력하면 설계된 데이터에 차곡히 쌓일 듯. 그러면 
+        그 사람들의 순번과, 이름, 뭐 알고싶은것 email등, 그리고 점수, 지속시간
+        등 확인가능하다. 
+
+        데이터확인 할 수 있는 서비스를 무료로 제공하는 이유는, 그들은 어차피 거기서
+        수익내는게 아니라,그것을 재료로 주고 보완재로, 유저를 유지하는 것이다.
+
+        어차피 자신들이 데이터베이스 만들어 분석하는 걸, 그것을 개인채널만다 공개
+        함으로써 채널유지를 하는 것.
+        
+        이런 데이터베이스 + 인문철학적 분석을 통해서 앞으로 더욱 그런 통찰을 필요로
+        하는 시대가 올 것이다. 
+
+
+    -->
+
+            </pre>
+
+            <h3></h3>
+            
+            <pre class="si">
+               
+
+
+            </pre>
+            <input type="button" value="다음페이지" onclick="
+               jsp01_next()">
+
+        
+
+
+        </article> <!--끝엔 한주 수업단위별-->
+
+
+    </section>
+
+    
+    
+</body>
+</html>
