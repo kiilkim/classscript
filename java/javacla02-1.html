@@ -50,38 +50,43 @@
         </nav>
         <article> <!--수업내용-->
             <h2>[2월]0203</h2>
-            <h3>1. </h3>
+            <h3>1. Person 클래스정의 </h3>
             <pre class="si">
-     --- 멤버변수 = 인스턴스변수 ---
-     => 클래스 내부, 메서드 외부에 선언한 변수
-     이름(name) - 문자열
-     나이(age) - 정수
-     배고픔(isHungry) - 논리
-     
-     --- 메서드 ---
-     먹는다(eat()) : 파라미터 X, 리턴값 X
-     일한다(work()) : 파라미터 X, 리턴값 X
+1) 멤버변수 = 인스턴스변수
 
-    //멤버변수(인스턴스변수) 선언          
-	String name;
-	int age;
-	boolean isHungry;
+=> 클래스 내부, 메서드 외부에 선언한 변수
+=> 해당 클래스 내의 대부분의 매서드에서 공통적으로 사용 가능
+
+이름(name) - 문자열
+나이(age) - 정수
+배고픔(isHungry) - 논리
+
+  
+2) 매서드
+
+먹는다(eat()) : 파라미터 X, 리턴값 X
+일한다(work()) : 파라미터 X, 리턴값 X
+
+멤버변수(인스턴스변수) 선언          
+String name;
+int age;
+boolean isHungry;
 	
 	
-	// 메서드 정의
-	// 1. eat() : 파라미터 X, 리턴값 X, "밥을 먹는다!" 출력, isHungry 변수 false 로 변경
-	답: <span style="color:whitesmoke"> void eat() {
-		System.out.println("밥을 먹는다!");
-		// 인스턴스변수 inHungry 의 값을 false 로 변경
-        isHungry = false;
-    }
-	</span>
-	
-	// 2. work() : 파라미터 X, 리턴값 X, "일 한다!" 출력, isHungry 변수 true 로 변경
-	답: <span style="color:whitesmoke">public void work() {
-		System.out.println("일 한다!");
-		isHungry = true;
-    }
+메서드 정의
+ 1. eat() : 파라미터 X, 리턴값 X, "밥을 먹는다!" 출력, isHungry 변수 false 로 변경
+답: <span style="color:whitesmoke"> void eat() {
+    System.out.println("밥을 먹는다!");
+    // 인스턴스변수 inHungry 의 값을 false 로 변경
+    isHungry = false;
+}
+</span>
+
+2. work() : 파라미터 X, 리턴값 X, "일 한다!" 출력, isHungry 변수 true 로 변경
+답: <span style="color:whitesmoke">public void work() {
+    System.out.println("일 한다!");
+    isHungry = true;
+}
 </span>
 
             
@@ -89,24 +94,70 @@
             <h3>2. person</h3>
          
             <pre class="si">
-    Person 클래스의 객체(인스턴스 생성) = 인스턴스화
-     - new 키워드를 사용하여 생성할 인스턴스의 클래스명을 명시
-     - Heap 공간에 생성된 인스턴스 주소를 저장할 참조변수를 선언하고
-       해당 인스턴스 생성 후의 주소값을 저장
-     - 인스턴스 생성 후에는 참조변수를 통해 인스턴스 접근 가능
-      -> 변수명.멤버변수명 또는 변수명.매서드명()의 형태로 접근 
-     &lt; 기본 문법 >
-     클래스명 변수명 = new 클래스명();               
-     
+1) Person 클래스의 객체(인스턴스 생성) = 인스턴스화
+- new 키워드를 사용하여 생성할 인스턴스의 클래스명을 명시
+- Heap 공간에 생성된 인스턴스 주소를 저장할 참조변수를 선언하고
+  해당 인스턴스 생성 후의 주소값을 저장
+- 인스턴스 생성 후에는 참조변수를 통해 인스턴스 접근 가능
+-> 변수명.멤버변수명 또는 변수명.매서드명()의 형태로 접근 
+-> 단, 자신의 클래스 내의 변수 또는 메서드는 참조변수 없이 바로 접근
+
+&lt;클래스 정의 기본 문법 >
+[제한자] class 클래스명 {
+
+    멤버변수(인스턴스변수) 선언
+    멤버메서드 정의
+} 
+
     person() 매서드라고 한다.
     
     생성자라는 개념이 있다. 
+
+&lt; 인스턴스 생성 기본 문법 >
+     클래스명 변수명 = new 클래스명();
+    
+    
+하나의 java 파일(소스 파일) 내에 여러개의 클래스를 정의할 수 있다.
+ => 단, 파일명과 동일한 클래스를 제외한 나머지 클래스는 접근제한자를 빼고 정의한다.
+
+ 동물(Animal) 클래스 정의
+ 멤버변수 : 이름(name), 나이(age)
+ 메서드 : cry() - 파라미터 X, 리턴값 X, "동물 울음 소리!" 출력
+
+서로다른 인스턴스는 각각 다른 정보를 관리할 수 있다!
+
+예제 animal 인스턴스 2개 생성 후 다음과 같이 초기화 출력
+ ------ 인스턴스1(ani1) ------
+ "이름 : 멍멍이, 나이 : 2"
+ "동물 울음 소리"
+ ------ 인스턴스2(ani2) ------
+ 이름 : 야옹이, 나이 : 3 
+ "동물 울음 소리"
+답: <span style="color:whitesmoke">
+	Animal ani1 = new Animal();
+    ani1.name = "멍멍이";
+    ani1.age = 2;
+    System.out.println("이름 : " + ani1.name + ", 나이 : " + ani1.age);
+    ani1.cry();
+    
+    Animal ani2 = new Animal();
+    ani2.name = "야옹이";
+    ani2.age = 3;
+    System.out.println("이름 : " + ani2.name + ", 나이 : " + ani2.age);
+    ani2.cry();
+    
+</span>
+
+
             </pre>
             <input type="button" value="다음페이지" onclick="
                java01_next()">
 
-        
+        <h3>3. 다른 클래스와 연결</h3>
+        <pre class="si">
 
+
+        </pre>
 
         </article> <!--끝엔 한주 수업단위별-->
 
